@@ -8,7 +8,7 @@
     <OutputType>Exe</OutputType>
     <RootNamespace>ExcelToCsv_1</RootNamespace>
     <AssemblyName>ExcelToCsv_1</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
@@ -53,8 +53,8 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ReadExcel\Data.cs" />
-    <Compile Include="ReadExcel\ReadExcelClass.cs" />
+    <Compile Include="ExportExcel\Read\ExcelConfig.cs" />
+    <Compile Include="ExportExcel\Read\ReadExcel.cs" />
     <Compile Include="Write\WriteCSVClass.cs" />
   </ItemGroup>
   <ItemGroup>
