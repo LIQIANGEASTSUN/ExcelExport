@@ -10,7 +10,7 @@ namespace ExcelToCsv_1
         {
             Console.WriteLine("开始导出 CSV");
 
-            string path = "G:\\ExcelToCSV\\ExcelToCSV\\Table\\Builds.xlsx";
+            string path = "G:\\Project\\Git\\ExcelToCSV\\New\\ExcelToCSV\\Table\\Builds222.xlsx";
 
             ReadExcelClass readExcelClass = new ReadExcelClass();
             readExcelClass.Read(path);
