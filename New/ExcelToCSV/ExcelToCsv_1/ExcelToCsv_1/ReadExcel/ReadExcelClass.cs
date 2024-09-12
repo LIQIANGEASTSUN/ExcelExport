@@ -124,7 +124,17 @@ namespace ReadExcel
                 foreach(DataColumn dataColumn in dataTable.Columns)
                 {
                     string columnName = dataColumn.ColumnName;
-                    string value = dataRow[columnName].ToString();
+                    string cellValue = dataRow[columnName].ToString();
+
+                    // 处理包含逗号或双引号的字段
+                    if (cellValue.Contains(",") || cellValue.Contains("\""))
+                    {
+                        // 如果包含双引号，替换为两个双引号
+                        cellValue = cellValue.Replace("\"", "\"\"");
+
+                        // 用双引号包裹整个字段
+                        cellValue = $"\"{cellValue}\"";
+                    }
                 }
             }
         }
