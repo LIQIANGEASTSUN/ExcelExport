@@ -17,16 +17,29 @@ namespace ExportExcel
     /// </summary>
     public class ReadExcel
     {
-        /// <summary>
-        /// 客户端需要导出的列
-        /// </summary>
-        private HashSet<int> clientExportColHash = new HashSet<int>();
-        /// <summary>
-        /// 服务器需要导出的列
-        /// </summary>
-        private HashSet<int> serverExportColHash = new HashSet<int>();
+        private string excelPath = string.Empty;
+        private bool isValid = false;
 
+        /// 客户端需要导出的列
+        private HashSet<int> clientExportColHash = new HashSet<int>();
+        /// 服务器需要导出的列
+        private HashSet<int> serverExportColHash = new HashSet<int>();
+        /// 配置表数据
         private List<List<string>> rowList = new List<List<string>>();
+        /// 配置表检测：重复的 key、重复的属性名
+        private StringBuilder sbCheck = new StringBuilder();
+
+        public string ExcelPath
+        {
+            get { return excelPath; }
+            private set { excelPath = value; }
+        }
+
+        public bool IsValid
+        {
+            get { return isValid; }
+            private set { isValid = value; }
+        }
 
         public HashSet<int> ClientExportColHash
         {
@@ -43,12 +56,7 @@ namespace ExportExcel
             get { return rowList; }
         }
 
-        public ReadExcel()
-        {
-
-        }
-
-        public void Read(string path)
+        public ReadExcel(string path)
         {
             if (!File.Exists(path))
             {
@@ -56,26 +64,28 @@ namespace ExportExcel
                 return;
             }
 
+            ExcelPath = path;
+
             DataTable dataTable = GetDataTable(path);
-            if (null == dataTable || dataTable.Rows.Count < ExcelConfig.RowMin)
+            if (null == dataTable || dataTable.Rows.Count < ExcelConfig.RowMin || dataTable.Columns.Count <= 0)
             {
-                Debug("数据表不存在或格式不对:" + path);
+                Debug("数据表格式不对:" + path);
                 return;
             }
 
-            if (!CheckPropertyType(dataTable))
+            sbCheck.AppendLine("配置表检测:" + path);
+            if (!CheckTable(dataTable))
             {
                 return;
             }
-
        
             CSHash(dataTable);
             AnalysisDataTable(dataTable);
+            IsValid = true;
         }
 
         private DataTable GetDataTable(string path)
         {
-            string text = string.Empty;
             if (Path.GetExtension(path).CompareTo(".xlsx") == 0)
             {
                 return ReadXlsx(path);
@@ -109,55 +119,114 @@ namespace ExportExcel
 
         private DataTable ReadExcelXLS(string path)
         {
-            DataTable dtYourData = new DataTable("YourData");
-            // Must be saved as excel 2003 workbook, not 2007, mono issue really
-            string con = "Driver={Microsoft Excel Driver (*.xls)}; DriverId=790; Dbq=" + path + ";";
+            DataTable dtYourData = null;
+            try
+            {
+                dtYourData = new DataTable("YourData");
+                // Must be saved as excel 2003 workbook, not 2007, mono issue really
+                string con = "Driver={Microsoft Excel Driver (*.xls)}; DriverId=790; Dbq=" + path + ";";
 
-            string yourQuery = "SELECT * FROM [Sheet1$]";
-            // our odbc connector 
-            OdbcConnection oCon = new OdbcConnection(con);
-            // our command object 
-            OdbcCommand oCmd = new OdbcCommand(yourQuery, oCon);
-            // table to hold the data 	
-            // open the connection 
-            oCon.Open();
-            // lets use a datareader to fill that table! 
-            OdbcDataReader rData = oCmd.ExecuteReader();
-            // now lets blast that into the table by sheer man power! 
-            dtYourData.Load(rData);
-            // close that reader! 
-            rData.Close();
-            // close your connection to the spreadsheet! 
-            oCon.Close();
+                string yourQuery = "SELECT * FROM [Sheet1$]";
+                // our odbc connector 
+                OdbcConnection oCon = new OdbcConnection(con);
+                // our command object 
+                OdbcCommand oCmd = new OdbcCommand(yourQuery, oCon);
+                // table to hold the data 	
+                // open the connection 
+                oCon.Open();
+                // lets use a datareader to fill that table! 
+                OdbcDataReader rData = oCmd.ExecuteReader();
+                // now lets blast that into the table by sheer man power! 
+                dtYourData.Load(rData);
+                // close that reader! 
+                rData.Close();
+                // close your connection to the spreadsheet! 
+                oCon.Close();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                Console.WriteLine(e.StackTrace);
+            }
 
             return dtYourData;
         }
 
+        private bool CheckTable(DataTable dataTable)
+        {
+            bool result1 = CheckPropertyType(dataTable, sbCheck);
+            bool result2 = CheckRepeatKey(dataTable, sbCheck);
+
+            if (!result1 || !result2)
+            {
+                Debug(sbCheck.ToString());
+            }
+
+            return result1 && result2;
+        }
+
         /// <summary>
+        /// 检查有无重复的属性名
         /// 检查属性类型有没有错误的
         /// </summary>
         /// <returns></returns>
-        private bool CheckPropertyType(DataTable dataTable)
+        private bool CheckPropertyType(DataTable dataTable, StringBuilder sb)
         {
-            DataRow propertyRow = dataTable.Rows[ExcelConfig.PropertyNameRow];
-            DataRow dataRow = dataTable.Rows[ExcelConfig.PropertyTypeRow];
+            DataRow propertyNameRow = dataTable.Rows[ExcelConfig.PropertyNameRow];
+            DataRow propertyTypeRow = dataTable.Rows[ExcelConfig.PropertyTypeRow];
             int totalCol = dataTable.Columns.Count;
 
+            // 属性名 hash
+            HashSet<string> propertyNameHash = new HashSet<string>();
+
             bool result = true;
-            StringBuilder sb = new StringBuilder();
             for (int col = 0; col < totalCol; col++)
             {
-                string type = dataRow[col].ToString();
+                string propertyName = propertyNameRow[col].ToString();
+                if (propertyNameHash.Contains(propertyName))
+                {
+                    result = false;
+                    string msg = string.Format("属性名重复_{0}", propertyName);
+                    sb.AppendLine(msg);
+                }
+                else
+                {
+                    propertyNameHash.Add(propertyName);
+                }
+
+                string type = propertyTypeRow[col].ToString();
                 if (!ExcelConfig.propertyTypeHash.Contains(type))
                 {
                     result = false;
-                    sb.AppendLine(string.Format("属性类型错误_{0}:{1}", propertyRow[col].ToString(), type));
+                    string msg = string.Format("属性类型错误_{0}:{1}", propertyNameRow[col].ToString(), type);
+                    sb.AppendLine(msg);
                 }
             }
 
-            if (!result)
+            return result;
+        }
+        
+        /// <summary>
+        /// 检查重复的主键
+        /// </summary>
+        /// <returns></returns>
+        private bool CheckRepeatKey(DataTable dataTable, StringBuilder sb)
+        {
+            bool result = true;
+            HashSet<string> keyHash = new HashSet<string>();
+            foreach(DataRow dataRow in dataTable.Rows)
             {
-                Debug(sb.ToString());
+                string key = dataRow[0].ToString();
+                if (keyHash.Contains(key))
+                {
+                    result = false;
+                    string msg = string.Format("主键重复:{0}", key);
+                    sb.AppendLine(msg);
+                }
+                else
+                {
+                    keyHash.Add(key);
+                }
             }
             return result;
         }
@@ -234,6 +303,5 @@ namespace ExportExcel
         {
             Console.WriteLine(msg);
         }
-
     }
 }
