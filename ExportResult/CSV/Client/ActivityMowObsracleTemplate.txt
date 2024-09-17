@@ -1,8 +1,0 @@
-id,rewardItem,probabilityRewardItem,DeathIcon,DeathEffect,
-1,"[[39003,1]]",[],ActivityMow_gecao01_03,E_Garland_02,
-2,"[[39003,1]]",[],ActivityMow_gecao01_03,E_Garland_02,
-3,"[[39003,1]]",[],ActivityMow_gecao01_03,E_Garland_02,
-4,"[[39003,1]]",[],ActivityMow_gecao01_03,E_Garland_02,
-5,"[[39003,1]]","[[20009,1,100],[39006,1,50],[-1,0,1000]]",ActivityMow_gecao01_03,E_Garland_02,
-6,"[[39003,1]]","[[15000,1,1000],[16000,1,1000],[39006,1,100]]",,,
-7,"[[39003,1]]","[[2006,1,500],[2007,1,500],[20009,1,100]]",,,

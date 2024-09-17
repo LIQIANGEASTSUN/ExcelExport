@@ -1,2 +1,0 @@
-id,guideType,ObstacleId,bustPos,maskType,maskConfig,skipType,bustText
-1001,,,,,,,

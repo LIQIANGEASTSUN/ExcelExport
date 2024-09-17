@@ -19,7 +19,7 @@ namespace ExcelExport
 
         public void Start(string[] args)
         {
-            Console.WriteLine("测试");
+            //Console.WriteLine("测试");
 
             args = new string[] {
                 "G:\\Git\\ExcelExport\\Table",

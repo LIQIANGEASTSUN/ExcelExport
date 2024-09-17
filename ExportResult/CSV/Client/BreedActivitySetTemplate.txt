@@ -1,2 +1,0 @@
-id,BreedParents,BreedRewards,BreedTenTime,BreedTaskDayReward,BreedTaskReward,breedActivityGetDragonTime
-3,"[1,9]","[[0,1301],[5,1302]]","[2100,100]",[],"[141031,1]",40

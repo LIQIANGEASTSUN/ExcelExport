@@ -1,4 +1,0 @@
-id,sceneid,taskunlock,aftertask,openinglevel,countdown,award
-4402,2322ThiefMagic,Eventmission32_020Prepare,,5,3,"[[13001,2],[90800,160],[1003,30]]"
-31610,2327WeatherIslands,Eventmission37_015KeyColors,,1,3,"[[1002,20]]"
-33832,2409GoldenTown,Eventmission2409_048FindDiff,Eventmission2409_049FindDiff,2,3,"[[1002,20]]"

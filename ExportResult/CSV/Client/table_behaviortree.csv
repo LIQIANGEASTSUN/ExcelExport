@@ -1,0 +1,11 @@
+﻿ID,EnName,CnName,Type,FloatValue,IntValue,LongValue,BoolValue,StringValue
+1,IsClick,操作手势/点击,5,0,0,0,0,
+2,IsDrag,操作手势/拖拽,5,0,0,0,0,
+3,IsDrop,操作手势/拖拽放下,5,0,0,0,0,
+4,IsSurvial,存活,5,0,0,0,0,
+5,IsRegisterDead,标记注册死亡,5,0,0,0,0,
+6,IsRocker,操作手势/摇杆,5,0,0,0,0,
+7,RockerX,操作手势/摇杆X输入,0,0,0,0,0,
+8,RockerY,操作手势/摇杆Y输入,0,0,0,0,0,
+9,RockerZ,操作手势/摇杆Z输入,0,0,0,0,0,
+10,MoveFunction,生物/移动-功能,3,0,0,0,0,

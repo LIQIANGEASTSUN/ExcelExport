@@ -1,0 +1,17 @@
+﻿ID,Directory,Type,Ignore
+1,SubAssets/ConfigBin,1,0
+2,SubAssets/CSVAssets,1,0
+3,SubAssets/Res/Fonts,1,0
+4,SubAssets/Res/Prefab/AddressableTest,1,0
+5,SubAssets/Res/Prefab/Character,1,0
+6,SubAssets/Res/Prefab/Collider,1,0
+7,SubAssets/Res/Prefab/Labyrinth,1,0
+8,SubAssets/Res/Prefab/Palette,1,0
+9,SubAssets/Res/Prefab/Sound,1,0
+10,SubAssets/Res/Prefab/UI,2,0
+11,SubAssets/Res/Sound,2,0
+12,SubAssets/Res/Spine/FrontRear,2,0
+13,SubAssets/Res/Spine/Single,2,0
+14,SubAssets/Res/Sprite,2,0
+15,SubAssets/Res/TileAsset,2,0
+16,SubAssets/Scenes,2,0

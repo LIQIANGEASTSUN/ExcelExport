@@ -1,1 +1,0 @@
-id,activityid,sceneid,obstacleid,rewarditem,repairingspine,repairedspine

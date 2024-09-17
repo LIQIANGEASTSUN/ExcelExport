@@ -38,7 +38,7 @@ namespace ExcelExport
             {
                 string csvDirectory = GetCsvSaveDirectory();
                 string fileName = Path.GetFileNameWithoutExtension(excelFilePath);
-                return Path.Combine(csvDirectory, "Client", fileName + ".txt");
+                return Path.Combine(csvDirectory, "Client", fileName + ".csv");
             }
         }
 
@@ -48,7 +48,7 @@ namespace ExcelExport
             {
                 string csvDirectory = GetCsvSaveDirectory();
                 string fileName = Path.GetFileNameWithoutExtension(excelFilePath);
-                return Path.Combine(csvDirectory, "Server", fileName + ".txt");
+                return Path.Combine(csvDirectory, "Server", fileName + ".csv");
             }
         }
 

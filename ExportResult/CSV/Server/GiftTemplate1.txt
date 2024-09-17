@@ -1,2 +1,0 @@
-id,openTimes,buyTimes,payLabel,condition,conditionParam,endingTime,level,group1UnlockLevel,group2UnlockLevel,group3UnlockLevel,group4UnlockLevel,group5UnlockLevel,group6UnlockLevel,group7UnlockLevel,group8UnlockLevel,group9UnlockLevel,group,CD,publicCD,showTime,popUpTimes,priority,itemIds,itemIds2,itemIds3,paramType,param
-50000,0,10,[],1,"[2024-1-19 19:00:00,2024-1-26 18:50:00]",2024-1-26 19:00:00,9,9,9,9,9,9,9,9,9,9,50000,24,24,12,1,50000,"[10005,[1003,800],[60014,1],[60015,1]]",[],[],-1,[]

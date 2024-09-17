@@ -1,2 +1,0 @@
-id,unlockLevel,startTime,endTime,drawDrop,mustReward,
-7,12,2022-12-1 19:00:00,2023-1-1 19:00:00,"[[1001,40],[1001,380],2001]","[101001,1,100]",

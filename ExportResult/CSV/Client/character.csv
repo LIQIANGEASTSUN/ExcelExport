@@ -1,0 +1,4 @@
+﻿ID,Name,ResName,AI_Config,FunctionType,Speed
+100001,英雄1,Assets\SubAssets\Res\Spine\FrontRear\Hero\Hero2\Skin1\ch_hero2_skin1,player_tree,1,2
+100002,陆地鸡,Assets\SubAssets\Res\Spine\FrontRear\Chocobo\Chocobo7\ch_chocobo7,character_tree,2,1
+100003,小狐狸2,Assets\SubAssets\Res\Spine\FrontRear\Fox\Fox2\ch_fox2,character_tree,2,1

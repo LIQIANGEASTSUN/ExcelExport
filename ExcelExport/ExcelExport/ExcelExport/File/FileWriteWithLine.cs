@@ -1,6 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
+using System.Text;
 
 namespace ExcelExport
 {
@@ -17,7 +17,7 @@ namespace ExcelExport
             try
             {
                 _fs = new FileStream(path, FileMode.Create);
-                _sw = new StreamWriter(_fs);
+                _sw = new StreamWriter(_fs, Encoding.UTF8);
             }
             catch (Exception e)
             {

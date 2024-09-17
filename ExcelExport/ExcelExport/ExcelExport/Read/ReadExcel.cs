@@ -216,6 +216,11 @@ namespace ExcelExport
                 // 用双引号包裹整个字段
                 cellValue = $"\"{cellValue}\"";
             }
+
+            if (cellValue.Contains("\n"))
+            {
+                cellValue = cellValue.Replace("\n", "\\n");
+            }
             return cellValue;
         }
 

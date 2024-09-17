@@ -1,7 +1,0 @@
-id,icon,partnerIcon,unlockLevel,processType,
-1001,partnermake_icon_01,item_icon_dragon_career03,1,"[1,11,12,13]",
-1002,partnermake_icon_02,item_icon_dragon_career01,9,"[2,14,15,16]",
-1003,partnermake_icon_03,item_icon_dragon_career04,10,"[3,17,18,19]",
-1004,partnermake_icon_04,item_icon_dragon_career02,13,"[4,20,21,22]",
-1005,partnermake_icon_05,item_icon_dragon_career06,18,"[5,23,24,25]",
-1006,partnermake_icon_06,item_icon_dragon_career05,20,"[6,26,27,28]",
