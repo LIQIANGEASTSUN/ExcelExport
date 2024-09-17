@@ -12,7 +12,7 @@ namespace ExcelExport
             {
                 string directory = Path.GetDirectoryName(excelFilePath);
                 string parentDirectory = Directory.GetParent(directory).FullName;
-                return Path.Combine(parentDirectory, "Export", "CSV");
+                return Path.Combine(parentDirectory, "ExportResult", "CSV");
             }
         }
 

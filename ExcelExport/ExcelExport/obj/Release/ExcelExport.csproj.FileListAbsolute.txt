@@ -1,0 +1,11 @@
+G:\Git\ExcelExport\ExcelExport\ExcelExport\bin\Release\Excel.dll
+G:\Git\ExcelExport\ExcelExport\ExcelExport\bin\Release\ICSharpCode.SharpZipLib.dll
+G:\Git\ExcelExport\ExcelExport\ExcelExport\obj\Release\ExcelExport.csproj.AssemblyReference.cache
+G:\Git\ExcelExport\ExcelExport\ExcelExport\obj\Release\ExcelExport.csproj.SuggestedBindingRedirects.cache
+G:\Git\ExcelExport\ExcelExport\ExcelExport\obj\Release\ExcelExport.csproj.CoreCompileInputs.cache
+G:\Git\ExcelExport\ExcelExport\ExcelExport\obj\Release\ExcelExport.csproj.CopyComplete
+G:\Git\ExcelExport\ExcelExport\ExcelExport\bin\Release\ExcelExport.exe.config
+G:\Git\ExcelExport\ExcelExport\ExcelExport\bin\Release\ExcelExport.exe
+G:\Git\ExcelExport\ExcelExport\ExcelExport\bin\Release\ExcelExport.pdb
+G:\Git\ExcelExport\ExcelExport\ExcelExport\obj\Release\ExcelExport.exe
+G:\Git\ExcelExport\ExcelExport\ExcelExport\obj\Release\ExcelExport.pdb

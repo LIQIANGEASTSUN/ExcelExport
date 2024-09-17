@@ -20,3 +20,14 @@ G:\Git\ExcelToCSV\ExcelExport\ExcelExport\obj\Debug\ExcelExport.csproj.CoreCompi
 G:\Git\ExcelToCSV\ExcelExport\ExcelExport\obj\Debug\ExcelExport.csproj.CopyComplete
 G:\Git\ExcelToCSV\ExcelExport\ExcelExport\obj\Debug\ExcelToCsv_1.exe
 G:\Git\ExcelToCSV\ExcelExport\ExcelExport\obj\Debug\ExcelToCsv_1.pdb
+G:\Git\ExcelExport\ExcelExport\ExcelExport\bin\Debug\Excel.dll
+G:\Git\ExcelExport\ExcelExport\ExcelExport\bin\Debug\ICSharpCode.SharpZipLib.dll
+G:\Git\ExcelExport\ExcelExport\ExcelExport\obj\Debug\ExcelExport.csproj.AssemblyReference.cache
+G:\Git\ExcelExport\ExcelExport\ExcelExport\obj\Debug\ExcelExport.csproj.SuggestedBindingRedirects.cache
+G:\Git\ExcelExport\ExcelExport\ExcelExport\obj\Debug\ExcelExport.csproj.CoreCompileInputs.cache
+G:\Git\ExcelExport\ExcelExport\ExcelExport\obj\Debug\ExcelExport.csproj.CopyComplete
+G:\Git\ExcelExport\ExcelExport\ExcelExport\bin\Debug\ExcelExport.exe.config
+G:\Git\ExcelExport\ExcelExport\ExcelExport\bin\Debug\ExcelExport.exe
+G:\Git\ExcelExport\ExcelExport\ExcelExport\bin\Debug\ExcelExport.pdb
+G:\Git\ExcelExport\ExcelExport\ExcelExport\obj\Debug\ExcelExport.exe
+G:\Git\ExcelExport\ExcelExport\ExcelExport\obj\Debug\ExcelExport.pdb
