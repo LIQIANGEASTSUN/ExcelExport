@@ -1,0 +1,11 @@
+G:\Git\ExcelToCSV\ExcelToCSV\ExcelToCsv_1\ExcelToCsv_1\bin\Release\ExcelToCsv_1.exe.config
+G:\Git\ExcelToCSV\ExcelToCSV\ExcelToCsv_1\ExcelToCsv_1\bin\Release\ExcelToCsv_1.exe
+G:\Git\ExcelToCSV\ExcelToCSV\ExcelToCsv_1\ExcelToCsv_1\bin\Release\ExcelToCsv_1.pdb
+G:\Git\ExcelToCSV\ExcelToCSV\ExcelToCsv_1\ExcelToCsv_1\bin\Release\Excel.dll
+G:\Git\ExcelToCSV\ExcelToCSV\ExcelToCsv_1\ExcelToCsv_1\bin\Release\ICSharpCode.SharpZipLib.dll
+G:\Git\ExcelToCSV\ExcelToCSV\ExcelToCsv_1\ExcelToCsv_1\obj\Release\ExcelToCsv_1.csproj.AssemblyReference.cache
+G:\Git\ExcelToCSV\ExcelToCSV\ExcelToCsv_1\ExcelToCsv_1\obj\Release\ExcelToCsv_1.csproj.SuggestedBindingRedirects.cache
+G:\Git\ExcelToCSV\ExcelToCSV\ExcelToCsv_1\ExcelToCsv_1\obj\Release\ExcelToCsv_1.csproj.CoreCompileInputs.cache
+G:\Git\ExcelToCSV\ExcelToCSV\ExcelToCsv_1\ExcelToCsv_1\obj\Release\ExcelToCsv_1.csproj.CopyComplete
+G:\Git\ExcelToCSV\ExcelToCSV\ExcelToCsv_1\ExcelToCsv_1\obj\Release\ExcelToCsv_1.exe
+G:\Git\ExcelToCSV\ExcelToCSV\ExcelToCsv_1\ExcelToCsv_1\obj\Release\ExcelToCsv_1.pdb
