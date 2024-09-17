@@ -6,9 +6,15 @@ namespace ExcelExport
 {
     internal class StartExport
     {
+        public static StartExport Instance;
+
+        /// <summary>
+        /// 有错误的配置表
+        /// </summary>
+        private List<string> errorFileList = new List<string>();
         public StartExport()
         {
-
+            Instance = this;
         }
 
         public void Start(string[] args)
@@ -42,8 +48,9 @@ namespace ExcelExport
             }
 
             Console.WriteLine("导表结束");
-        }
 
+            OutPutErrorFile();
+        }
         
         private void ExportDirectory(string directory)
         {
@@ -79,6 +86,25 @@ namespace ExcelExport
             new WriteCsvServer(readExcel);
             Console.WriteLine("导出完成:" + filePath);
             Console.WriteLine("");
+        }
+
+        private void OutPutErrorFile()
+        {
+            if (errorFileList.Count <= 0)
+            {
+                return;
+            }
+            Console.WriteLine("有错误的配置表");
+            foreach(var filePath in errorFileList)
+            {
+                Console.WriteLine(filePath);
+                Console.WriteLine("");
+            }
+        }
+
+        public void AddErrorFileInfo(string filePath)
+        {
+            errorFileList.Add(filePath);
         }
 
     }
