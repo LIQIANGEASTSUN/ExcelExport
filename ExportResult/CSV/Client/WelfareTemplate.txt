@@ -1,0 +1,5 @@
+id,Type,Parameter,Sort,Icon,Key
+1,2,-1,1,ui_giftcollection_icon_card,UI_monthly_card_title
+2,3,-1,2,ui_giftcollection_icon_first,UI_first_charge_gift
+3,4,-1,3,ui_giftcollection_icon_fund,ui_GrowthFund_title
+4,1,600,4,ui_th_gift_map_icon,ui_dailyBargain_title

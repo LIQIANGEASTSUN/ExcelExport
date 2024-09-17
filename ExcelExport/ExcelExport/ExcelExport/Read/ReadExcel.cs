@@ -73,7 +73,6 @@ namespace ExcelExport
                 return;
             }
 
-            sbCheck.AppendLine("配置表检测:" + path);
             if (!CheckTable(dataTable))
             {
                 return;
@@ -183,6 +182,10 @@ namespace ExcelExport
             for (int col = 0; col < totalCol; col++)
             {
                 string propertyName = propertyNameRow[col].ToString();
+                if (string.IsNullOrEmpty(propertyName))
+                {
+                    continue;
+                }
                 if (propertyNameHash.Contains(propertyName))
                 {
                     result = false;
@@ -214,9 +217,16 @@ namespace ExcelExport
         {
             bool result = true;
             HashSet<string> keyHash = new HashSet<string>();
-            foreach(DataRow dataRow in dataTable.Rows)
+
+            int totalRow = dataTable.Rows.Count;
+            for (int row = ExcelConfig.RowMin; row < totalRow; row++)
             {
+                DataRow dataRow = dataTable.Rows[row];
                 string key = dataRow[0].ToString();
+                if (string.IsNullOrEmpty(key))
+                {
+                    continue;
+                }
                 if (keyHash.Contains(key))
                 {
                     result = false;
@@ -228,6 +238,7 @@ namespace ExcelExport
                     keyHash.Add(key);
                 }
             }
+
             return result;
         }
 
@@ -273,6 +284,13 @@ namespace ExcelExport
         private void CollectRow(DataRow dataRow, int totalCol)
         {
             List<string> list = new List<string>();
+
+            string key = dataRow[0].ToString();
+            if (string.IsNullOrEmpty(key))
+            {
+                return;
+            }
+
             for (int col = 0; col < totalCol; col++)
             {
                 //DataColumn dataColumn = dataTable.Columns[j];

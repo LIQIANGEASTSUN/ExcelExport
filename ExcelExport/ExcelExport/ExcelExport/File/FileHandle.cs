@@ -1,4 +1,5 @@
 ﻿using System.IO;
+using System.Collections.Generic;
 
 namespace ExcelExport
 {
@@ -6,13 +7,23 @@ namespace ExcelExport
     {
         private static object locker = new object();
 
-        public static string GetCsvSaveDirectory(string excelFilePath)
+        public static HashSet<string> validExtensionHash = new HashSet<string>
+        {
+            ".xlsx",
+            ".xls",
+        };
+
+        private static string savePath = string.Empty;
+        public static void SetSavePath(string path)
+        {
+            savePath = path;
+        }
+
+        public static string GetCsvSaveDirectory()
         {
             lock (locker)
             {
-                string directory = Path.GetDirectoryName(excelFilePath);
-                string parentDirectory = Directory.GetParent(directory).FullName;
-                return Path.Combine(parentDirectory, "ExportResult", "CSV");
+                return Path.Combine(savePath, "CSV");
             }
         }
 
@@ -25,7 +36,7 @@ namespace ExcelExport
         {
             lock (locker)
             {
-                string csvDirectory = GetCsvSaveDirectory(excelFilePath);
+                string csvDirectory = GetCsvSaveDirectory();
                 string fileName = Path.GetFileNameWithoutExtension(excelFilePath);
                 return Path.Combine(csvDirectory, "Client", fileName + ".txt");
             }
@@ -35,7 +46,7 @@ namespace ExcelExport
         {
             lock (locker)
             {
-                string csvDirectory = GetCsvSaveDirectory(excelFilePath);
+                string csvDirectory = GetCsvSaveDirectory();
                 string fileName = Path.GetFileNameWithoutExtension(excelFilePath);
                 return Path.Combine(csvDirectory, "Server", fileName + ".txt");
             }

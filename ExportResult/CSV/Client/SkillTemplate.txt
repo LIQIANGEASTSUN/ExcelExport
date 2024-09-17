@@ -1,0 +1,5 @@
+id,name,icon,desc,type,param
+100,UI_equip_skill_1,equip_skill_product,UI_equip_skill_1_desc,1,"[10,100]"
+200,UI_equip_skill_2,UI_equip_skill_reduce_CD,UI_equip_skill_2_desc,2,[30]
+300,UI_equip_skill_3,equip_skill_drop,UI_equip_skill_3_desc,3,"[20,1002,2]"
+400,UI_equip_skill_4,UI_equip_skill_keep_full,UI_equip_skill_4_desc,4,[]

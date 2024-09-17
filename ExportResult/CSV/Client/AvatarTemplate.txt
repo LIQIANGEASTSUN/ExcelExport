@@ -1,0 +1,10 @@
+id,name,desc,icon,getWay,level,openTime
+1,avatar_1,avatar_desc_1,Tou1,1,0,
+2,avatar_2,avatar_desc_1,Tou2,1,0,
+3,avatar_3,avatar_desc_1,Tou3,1,0,
+4,avatar_4,avatar_desc_1,Tou4,1,0,
+5,avatar_5,avatar_desc_1,Tou5,1,0,
+6,avatar_6,avatar_desc_1,Tou6,1,0,
+7,avatar_7,avatar_desc_1,Tou7,1,0,
+8,avatar_8,avatar_desc_1,Tou8,1,0,
+26001,avatar_26001,avatar_desc_26001,Tou9_all,2,8,2023-9-20 19:00:00

@@ -1,0 +1,2 @@
+id,unlockLevel,startTime,endTime,drawDrop,mustReward,dragonId,desc1,desc2,desc3,displayItem,forecastWeight,ad_image,name,forecastDesc,activityUI
+7,12,2022-12-1 19:00:00,2023-1-1 19:00:00,"[[1001,40],[1001,380],2001]","[101001,1,100]",101001,UI_dragonDrawui_dragonDes1,UI_dragonDrawui_dragonDes2,UI_dragonDrawui_dragonDes3,1003,5,Ad_image_dragonDraw2,UI_dragonDrawui_title,"ui_activityForecast_dragonDraw4,ui_activityForecast_dragonDraw5,ui_activityForecast_dragonDraw6",0

@@ -1,0 +1,5 @@
+id,sceneid,optionlevel,bubbleicon,title,getitem,option,dontoption
+30122,2320StarPark,7,,2320Star_tittle,"[[1003,5],[1003,10],[1003,15],[1003,20]]","[""2320Star_option1"",""2320Star_option2"",""2320Star_option3"",""2320Star_option4""]",2320Star_nooption
+2,2322ThiefMagic,,,2322Thief_title,"[[1003,10],[1003,10]]","[""2322Thief_option1"",""2322Thief_option2""]",2322Thief_nooption
+33302,Guide3StarPark,7,,2320Star_tittle,"[[1003,5],[1003,10],[1003,15],[1003,20]]","[""2320Star_option1"",""2320Star_option2"",""2320Star_option3"",""2320Star_option4""]",2320Star_nooption
+33833,2409GoldenTown,2,,2409Golden_tittle,"[[1003,12],[1003,12],[1003,12],[1003,12]]","[""2409Golden_option1"",""2409Golden_option2"",""2409Golden_option3"",""2409Golden_option4""]",2409Golden_nooption

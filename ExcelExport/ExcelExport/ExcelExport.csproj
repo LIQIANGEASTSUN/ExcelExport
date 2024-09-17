@@ -53,6 +53,7 @@
   <ItemGroup>
     <Compile Include="ExcelExport\File\FileHandle.cs" />
     <Compile Include="ExcelExport\File\FileWriteWithLine.cs" />
+    <Compile Include="ExcelExport\StartExport.cs" />
     <Compile Include="ExcelExport\Write\WriteCsvServer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

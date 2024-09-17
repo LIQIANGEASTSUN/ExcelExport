@@ -1,0 +1,7 @@
+id,obstacleId,icon,name,model,isOriginal,sceneid
+1,300083,carriage_big_2,Architectural_skin_6,city_dragonSeason_carriage,1,
+2,300083,carriage_big_1,Architectural_skin_7,city_Carriage_1,0,5
+3,300068,treehouse_icon_1,Architectural_skin_8,building_Pumpkinhouse_lv3,1,
+4,300068,treehouse_icon_2,Architectural_skin_9,city_Pumpkinhouse_1,0,10
+5,9110,fountain_skin0,Architectural_skin_10,dragon_draw_enter,1,
+6,9110,fountain_skin1,Architectural_skin_11,city_fountain_1,0,15

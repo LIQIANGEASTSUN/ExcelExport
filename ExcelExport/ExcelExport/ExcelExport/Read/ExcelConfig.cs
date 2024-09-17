@@ -36,7 +36,7 @@ namespace ExcelExport
         /// <returns></returns>
         public static HashSet<string> propertyTypeHash = new HashSet<string>()
         {
-            "int", "long", "float", "double", "string"
+            "int", "long", "float", "double", "string", "String", "JSONArray"
         };
     }
 }

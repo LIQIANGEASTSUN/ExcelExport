@@ -1,7 +1,0 @@
-id,building,level
-100000,大本营LV1,1
-100001,大本营LV2,2
-100002,"abcd,efghijklmn",3
-100003,"hijkl""mn""opq",4
-100004,"大,本营LV5",5
-100005,"sld,jg""l,j""gl",5
