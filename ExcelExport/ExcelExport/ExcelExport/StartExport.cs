@@ -19,20 +19,17 @@ namespace ExcelExport
 
         public void Start(string[] args)
         {
-            //Console.WriteLine("测试");
-
-            args = new string[] {
-                "G:\\Git\\ExcelExport\\Table",
-                "G:\\Git\\ExcelExport\\ExportResult"
-            };
-
             if (null == args || args.Length == 0)
             {
+                Console.WriteLine("请输入 Excel 文件路径、 导出路径");
                 return;
             }
 
             string filePath = args[0];
             string savePath = args[1];
+
+            Console.WriteLine("filePath:" + filePath);
+            Console.WriteLine("savePath:" + savePath);
             FileHandle.SetSavePath(savePath);
 
             FileAttributes fileAttributes = File.GetAttributes(filePath);
