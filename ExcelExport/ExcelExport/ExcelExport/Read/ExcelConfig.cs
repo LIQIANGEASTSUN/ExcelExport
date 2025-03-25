@@ -2,6 +2,17 @@
 
 namespace ExcelExport
 {
+    /// <summary>
+    /// 导出为 客户端、服务器类型
+    /// C 导出客户端
+    /// S 导出服务器
+    /// </summary>
+    public enum CSType
+    { 
+        C = 1,
+        S = 2,
+    }
+
     internal class ExcelConfig
     {
         /// <summary>
@@ -36,7 +47,23 @@ namespace ExcelExport
         /// <returns></returns>
         public static HashSet<string> propertyTypeHash = new HashSet<string>()
         {
-            "int", "long", "float", "double", "string", "String", "JSONArray"
+            "int", 
+            "int[]",
+            "int[][]",
+            "long",
+            "long[]",
+            "long[][]",
+            "float",
+            "float[]",
+            "float[][]",
+            "double",
+            "double[]",
+            "double[][]",
+            "string",
+            "string[]",
+            "string[][]",
+            "Json",
         };
+
     }
 }

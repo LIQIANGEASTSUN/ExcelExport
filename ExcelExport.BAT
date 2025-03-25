@@ -15,7 +15,7 @@ echo exePath = %exePath%
 set filePath=%curdir%\Table
 echo filePath = %filePath%
 
-set savePath=%curdir%\ExportResult\CSV
+set savePath=%curdir%\ExportResult
 echo savePath = %savePath%
 
 REM 检查是否至少提供了一个参数, 传递的参数只能是 excel 文件路径，如果传递了 excel 文件路径，则只导出这一个文件

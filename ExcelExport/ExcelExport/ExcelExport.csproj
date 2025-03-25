@@ -41,6 +41,9 @@
     <Reference Include="ICSharpCode.SharpZipLib">
       <HintPath>..\DLL\ICSharpCode.SharpZipLib.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\DLL\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -55,15 +58,17 @@
     <Compile Include="ExcelExport\File\FileWriteWithLine.cs" />
     <Compile Include="ExcelExport\Read\ExcelCheck.cs" />
     <Compile Include="ExcelExport\StartExport.cs" />
-    <Compile Include="ExcelExport\Write\WriteCsvServer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ExcelExport\Read\ExcelConfig.cs" />
     <Compile Include="ExcelExport\Read\ReadExcel.cs" />
-    <Compile Include="ExcelExport\Write\WriteCsvClient.cs" />
+    <Compile Include="ExcelExport\Write\CSV\WriteCsv.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ExcelExport\Write\Json\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -14,6 +14,17 @@ namespace ExcelExport
 
         public FileWriteWithLine(string path)
         {
+            string directory = Path.GetDirectoryName(path);
+            if (!Directory.Exists(directory))
+            {
+                Directory.CreateDirectory(directory);
+            }
+
+            if (File.Exists(path))
+            {
+                File.Delete(path);
+            }
+
             try
             {
                 _fs = new FileStream(path, FileMode.Create);
