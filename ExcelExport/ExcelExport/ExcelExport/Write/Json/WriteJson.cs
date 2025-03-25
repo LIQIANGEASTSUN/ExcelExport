@@ -1,5 +1,5 @@
-﻿using System.Collections.Generic;
-using System.Text;
+﻿using Newtonsoft.Json;
+using System.Collections.Generic;
 using System;
 
 namespace ExcelExport
@@ -7,26 +7,35 @@ namespace ExcelExport
     /// <summary>
     /// 导出给客户端使用的 csv
     /// </summary>
-    public class WriteCsv
+    public class WriteJson
     {
         private FileWriteWithLine _fileWriteWithLine;
-        private StringBuilder _sb = new StringBuilder();
+        private Dictionary<string, Dictionary<string, object>> _dic = new Dictionary<string, Dictionary<string, object>>();
+        private List<string> _propertyList = new List<string>();
 
-        public WriteCsv(ReadExcel readExcel, CSType csType)
+        public WriteJson(ReadExcel readExcel, CSType csType)
         {
             if (!readExcel.IsValid)
             {
                 return;
             }
             string savePath = GetSavePath(readExcel, csType);
-            
-            _fileWriteWithLine = new FileWriteWithLine(savePath);
             Console.WriteLine("savePath:" + savePath);
-            foreach(List<object> list in readExcel.RowList)
+            _fileWriteWithLine = new FileWriteWithLine(savePath);
+
+            foreach(var property in readExcel.RowList[0])
             {
+                _propertyList.Add(property.ToString());
+            }
+
+            for (int i = 1; i < readExcel.RowList.Count; i++)
+            {
+                List<object> list = readExcel.RowList[i];
                 WriteRow(readExcel, csType, list);
             }
 
+            string json = JsonConvert.SerializeObject(_dic, Formatting.Indented);
+            _fileWriteWithLine.AppendLine(json);
             _fileWriteWithLine.Close();
         }
 
@@ -34,9 +43,9 @@ namespace ExcelExport
         {
             if (csType == CSType.C)
             {
-                return FileHandle.GetClientPath(readExcel.ExcelPath, FileType.CSV);
+                return FileHandle.GetClientPath(readExcel.ExcelPath, FileType.Json);
             }
-            return FileHandle.GetServerPath(readExcel.ExcelPath, FileType.CSV);
+            return FileHandle.GetServerPath(readExcel.ExcelPath, FileType.Json);
         }
 
         private HashSet<int> ClientExportColHash(ReadExcel readExcel, CSType csType)
@@ -50,8 +59,10 @@ namespace ExcelExport
 
         private void WriteRow(ReadExcel readExcel, CSType csType, List<object> list)
         {
-            _sb.Clear();
             HashSet<int> exportColHash = ClientExportColHash(readExcel, csType);
+
+            Dictionary<string, object> rowDic = new Dictionary<string, object>();
+            string id = list[0].ToString();
             for (int i = 0; i < list.Count; i++)
             {
                 if (!exportColHash.Contains(i))
@@ -59,17 +70,10 @@ namespace ExcelExport
                     continue;
                 }
 
-                if (i < list.Count - 1)
-                {
-                    _sb.Append(string.Format("{0}{1}", list[i].ToString(), ","));
-                }
-                else
-                {
-                    _sb.Append(string.Format("{0}", list[i].ToString()));
-                }
+                string property = _propertyList[i];
+                rowDic[property] = list[i];
             }
-
-            _fileWriteWithLine.AppendLine(_sb.ToString());
+            _dic[id] = rowDic;
         }
     }
 }

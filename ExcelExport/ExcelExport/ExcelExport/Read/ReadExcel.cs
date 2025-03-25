@@ -24,7 +24,7 @@ namespace ExcelExport
         /// 服务器需要导出的列
         private HashSet<int> serverExportColHash = new HashSet<int>();
         /// 配置表数据
-        private List<List<string>> rowList = new List<List<string>>();
+        private List<List<object>> rowList = new List<List<object>>();
 
         public string ExcelPath
         {
@@ -48,7 +48,7 @@ namespace ExcelExport
             get { return serverExportColHash; }
         }
 
-        public List<List<string>> RowList
+        public List<List<object>> RowList
         {
             get { return rowList; }
         }
@@ -188,7 +188,7 @@ namespace ExcelExport
 
         private void CollectRow(DataRow dataRow, int totalCol)
         {
-            List<string> list = new List<string>();
+            List<object> list = new List<object>();
 
             string key = dataRow[0].ToString();
             if (string.IsNullOrEmpty(key))
@@ -198,15 +198,17 @@ namespace ExcelExport
 
             for (int col = 0; col < totalCol; col++)
             {
-                string cellValue = dataRow[col].ToString();
-                cellValue = ProcessCellValue(cellValue);
-                list.Add(cellValue);
+                object cellObject = dataRow[col];
+                cellObject = ProcessCellValue(cellObject);
+                list.Add(cellObject);
             }
             RowList.Add(list);
         }
 
-        private string ProcessCellValue(string cellValue)
+        private object ProcessCellValue(object cellObject)
         {
+            bool isProcess = false;
+            string cellValue = cellObject.ToString();
             // 处理包含逗号或双引号的字段
             if (cellValue.Contains(",") || cellValue.Contains("\""))
             {
@@ -215,13 +217,16 @@ namespace ExcelExport
 
                 // 用双引号包裹整个字段
                 cellValue = $"\"{cellValue}\"";
+                isProcess = true;
             }
 
             if (cellValue.Contains("\n"))
             {
                 cellValue = cellValue.Replace("\n", "\\n");
+                isProcess = true;
             }
-            return cellValue;
+
+            return isProcess ? cellValue : cellObject;
         }
 
         private void Debug(string msg)

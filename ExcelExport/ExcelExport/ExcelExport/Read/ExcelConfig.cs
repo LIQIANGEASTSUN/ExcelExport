@@ -13,6 +13,15 @@ namespace ExcelExport
         S = 2,
     }
 
+    /// <summary>
+    /// 导出文件类型
+    /// </summary>
+    public enum FileType
+    {
+        CSV,
+        Json,
+    }
+
     internal class ExcelConfig
     {
         /// <summary>

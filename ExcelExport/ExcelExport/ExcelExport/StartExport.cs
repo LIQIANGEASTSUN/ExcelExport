@@ -31,6 +31,11 @@ namespace ExcelExport
             Console.WriteLine("filePath:" + filePath);
             Console.WriteLine("savePath:" + savePath);
             FileHandle.SetSavePath(savePath);
+            if (Directory.Exists(savePath))
+            {
+                Directory.Delete(savePath, true);
+            }
+            Directory.CreateDirectory(savePath);
 
             FileAttributes fileAttributes = File.GetAttributes(filePath);
 
@@ -81,6 +86,9 @@ namespace ExcelExport
             ReadExcel readExcel = new ReadExcel(filePath);
             new WriteCsv(readExcel, CSType.C);
             new WriteCsv(readExcel, CSType.S);
+
+            new WriteJson(readExcel, CSType.C);
+            new WriteJson(readExcel, CSType.S);
             Console.WriteLine("导出完成:" + filePath);
             Console.WriteLine("");
         }

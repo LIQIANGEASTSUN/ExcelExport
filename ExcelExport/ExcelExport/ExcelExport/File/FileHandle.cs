@@ -22,16 +22,31 @@ namespace ExcelExport
         /// </summary>
         /// <param name="excelFilePath"></param>
         /// <returns></returns>
-        public static string GetCsvClientPath(string excelFilePath)
+        public static string GetClientPath(string excelFilePath, FileType fileType)
         {
             string fileName = Path.GetFileNameWithoutExtension(excelFilePath);
-            return Path.Combine(savePath, "CSV", "Client", fileName + ".csv");
+            string extension = GetExtension(fileType);
+            return Path.Combine(savePath, fileType.ToString(), "Client", fileName + extension);
         }
 
-        public static string GetCsvServerPath(string excelFilePath)
+        public static string GetServerPath(string excelFilePath, FileType fileType)
         {
             string fileName = Path.GetFileNameWithoutExtension(excelFilePath);
-            return Path.Combine(savePath, "CSV", "Server", fileName + ".csv");
+            string extension = GetExtension(fileType);
+            return Path.Combine(savePath, fileType.ToString(), "Server", fileName + extension);
+        }
+
+        private static string GetExtension(FileType fileType)
+        {
+            if (fileType == FileType.CSV)
+            {
+                return ".csv";
+            }
+            else if (fileType == FileType.Json)
+            {
+                return ".json";
+            }
+            return ".txt";
         }
 
     }

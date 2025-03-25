@@ -1,0 +1,233 @@
+﻿{
+  "1001": {
+    "ID": 1001.0,
+    "LevelType": 1.0,
+    "MapConfig": "labyrinth1001",
+    "TileMapPrefab": "LevelMapIsometric10_13",
+    "MapType": 2.0
+  },
+  "1002": {
+    "ID": 1002.0,
+    "LevelType": 1.0,
+    "MapConfig": "labyrinth1001",
+    "TileMapPrefab": "LevelMapRectAngle10_13",
+    "MapType": 1.0
+  },
+  "1003": {
+    "ID": 1003.0,
+    "LevelType": 1.0,
+    "MapConfig": "labyrinth1001",
+    "TileMapPrefab": "LevelMapRectAngle10_13",
+    "MapType": 1.0
+  },
+  "1004": {
+    "ID": 1004.0,
+    "LevelType": 1.0,
+    "MapConfig": "labyrinth1001",
+    "TileMapPrefab": "LevelMapRectAngle10_13",
+    "MapType": 1.0
+  },
+  "1005": {
+    "ID": 1005.0,
+    "LevelType": 1.0,
+    "MapConfig": "labyrinth1001",
+    "TileMapPrefab": "LevelMapRectAngle10_13",
+    "MapType": 1.0
+  },
+  "1006": {
+    "ID": 1006.0,
+    "LevelType": 1.0,
+    "MapConfig": "labyrinth1001",
+    "TileMapPrefab": "LevelMapRectAngle10_13",
+    "MapType": 1.0
+  },
+  "1007": {
+    "ID": 1007.0,
+    "LevelType": 1.0,
+    "MapConfig": "labyrinth1001",
+    "TileMapPrefab": "LevelMapRectAngle10_13",
+    "MapType": 1.0
+  },
+  "1008": {
+    "ID": 1008.0,
+    "LevelType": 1.0,
+    "MapConfig": "labyrinth1001",
+    "TileMapPrefab": "LevelMapRectAngle10_13",
+    "MapType": 1.0
+  },
+  "1009": {
+    "ID": 1009.0,
+    "LevelType": 1.0,
+    "MapConfig": "labyrinth1001",
+    "TileMapPrefab": "LevelMapRectAngle10_13",
+    "MapType": 1.0
+  },
+  "1010": {
+    "ID": 1010.0,
+    "LevelType": 1.0,
+    "MapConfig": "labyrinth1001",
+    "TileMapPrefab": "LevelMapRectAngle10_13",
+    "MapType": 1.0
+  },
+  "1011": {
+    "ID": 1011.0,
+    "LevelType": 1.0,
+    "MapConfig": "labyrinth1001",
+    "TileMapPrefab": "LevelMapRectAngle10_13",
+    "MapType": 1.0
+  },
+  "1012": {
+    "ID": 1012.0,
+    "LevelType": 1.0,
+    "MapConfig": "labyrinth1001",
+    "TileMapPrefab": "LevelMapRectAngle10_13",
+    "MapType": 1.0
+  },
+  "1013": {
+    "ID": 1013.0,
+    "LevelType": 1.0,
+    "MapConfig": "labyrinth1001",
+    "TileMapPrefab": "LevelMapRectAngle10_13",
+    "MapType": 1.0
+  },
+  "1014": {
+    "ID": 1014.0,
+    "LevelType": 1.0,
+    "MapConfig": "labyrinth1001",
+    "TileMapPrefab": "LevelMapRectAngle10_13",
+    "MapType": 1.0
+  },
+  "1015": {
+    "ID": 1015.0,
+    "LevelType": 1.0,
+    "MapConfig": "labyrinth1001",
+    "TileMapPrefab": "LevelMapRectAngle10_13",
+    "MapType": 1.0
+  },
+  "1016": {
+    "ID": 1016.0,
+    "LevelType": 1.0,
+    "MapConfig": "labyrinth1001",
+    "TileMapPrefab": "LevelMapRectAngle10_13",
+    "MapType": 1.0
+  },
+  "1017": {
+    "ID": 1017.0,
+    "LevelType": 1.0,
+    "MapConfig": "labyrinth1001",
+    "TileMapPrefab": "LevelMapRectAngle10_13",
+    "MapType": 1.0
+  },
+  "1018": {
+    "ID": 1018.0,
+    "LevelType": 1.0,
+    "MapConfig": "labyrinth1001",
+    "TileMapPrefab": "LevelMapRectAngle10_13",
+    "MapType": 1.0
+  },
+  "1019": {
+    "ID": 1019.0,
+    "LevelType": 1.0,
+    "MapConfig": "labyrinth1001",
+    "TileMapPrefab": "LevelMapRectAngle10_13",
+    "MapType": 1.0
+  },
+  "1020": {
+    "ID": 1020.0,
+    "LevelType": 1.0,
+    "MapConfig": "labyrinth1001",
+    "TileMapPrefab": "LevelMapRectAngle10_13",
+    "MapType": 1.0
+  },
+  "1021": {
+    "ID": 1021.0,
+    "LevelType": 1.0,
+    "MapConfig": "labyrinth1001",
+    "TileMapPrefab": "LevelMapRectAngle10_13",
+    "MapType": 1.0
+  },
+  "1022": {
+    "ID": 1022.0,
+    "LevelType": 1.0,
+    "MapConfig": "labyrinth1001",
+    "TileMapPrefab": "LevelMapRectAngle10_13",
+    "MapType": 1.0
+  },
+  "1023": {
+    "ID": 1023.0,
+    "LevelType": 1.0,
+    "MapConfig": "labyrinth1001",
+    "TileMapPrefab": "LevelMapRectAngle10_13",
+    "MapType": 1.0
+  },
+  "1024": {
+    "ID": 1024.0,
+    "LevelType": 1.0,
+    "MapConfig": "labyrinth1001",
+    "TileMapPrefab": "LevelMapRectAngle10_13",
+    "MapType": 1.0
+  },
+  "1025": {
+    "ID": 1025.0,
+    "LevelType": 1.0,
+    "MapConfig": "labyrinth1001",
+    "TileMapPrefab": "LevelMapRectAngle10_13",
+    "MapType": 1.0
+  },
+  "1026": {
+    "ID": 1026.0,
+    "LevelType": 1.0,
+    "MapConfig": "labyrinth1001",
+    "TileMapPrefab": "LevelMapRectAngle10_13",
+    "MapType": 1.0
+  },
+  "1027": {
+    "ID": 1027.0,
+    "LevelType": 1.0,
+    "MapConfig": "labyrinth1001",
+    "TileMapPrefab": "LevelMapRectAngle10_13",
+    "MapType": 1.0
+  },
+  "1028": {
+    "ID": 1028.0,
+    "LevelType": 1.0,
+    "MapConfig": "labyrinth1001",
+    "TileMapPrefab": "LevelMapRectAngle10_13",
+    "MapType": 1.0
+  },
+  "1029": {
+    "ID": 1029.0,
+    "LevelType": 1.0,
+    "MapConfig": "labyrinth1001",
+    "TileMapPrefab": "LevelMapRectAngle10_13",
+    "MapType": 1.0
+  },
+  "1030": {
+    "ID": 1030.0,
+    "LevelType": 1.0,
+    "MapConfig": "labyrinth1001",
+    "TileMapPrefab": "LevelMapRectAngle10_13",
+    "MapType": 1.0
+  },
+  "1031": {
+    "ID": 1031.0,
+    "LevelType": 1.0,
+    "MapConfig": "labyrinth1001",
+    "TileMapPrefab": "LevelMapRectAngle10_13",
+    "MapType": 1.0
+  },
+  "1032": {
+    "ID": 1032.0,
+    "LevelType": 1.0,
+    "MapConfig": "labyrinth1001",
+    "TileMapPrefab": "LevelMapRectAngle10_13",
+    "MapType": 1.0
+  },
+  "1033": {
+    "ID": 1033.0,
+    "LevelType": 1.0,
+    "MapConfig": "labyrinth1001",
+    "TileMapPrefab": "LevelMapRectAngle10_13",
+    "MapType": 1.0
+  }
+}

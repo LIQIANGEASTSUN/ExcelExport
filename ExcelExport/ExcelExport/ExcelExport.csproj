@@ -58,6 +58,7 @@
     <Compile Include="ExcelExport\File\FileWriteWithLine.cs" />
     <Compile Include="ExcelExport\Read\ExcelCheck.cs" />
     <Compile Include="ExcelExport\StartExport.cs" />
+    <Compile Include="ExcelExport\Write\Json\WriteJson.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ExcelExport\Read\ExcelConfig.cs" />
@@ -67,8 +68,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="ExcelExport\Write\Json\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

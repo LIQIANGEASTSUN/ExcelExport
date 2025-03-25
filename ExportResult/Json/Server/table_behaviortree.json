@@ -1,0 +1,112 @@
+﻿{
+  "1": {
+    "ID": 1.0,
+    "EnName": "IsClick",
+    "CnName": "操作手势/点击",
+    "Type": 5.0,
+    "FloatValue": 0.0,
+    "IntValue": 0.0,
+    "LongValue": 0.0,
+    "BoolValue": 0.0,
+    "StringValue": null
+  },
+  "2": {
+    "ID": 2.0,
+    "EnName": "IsDrag",
+    "CnName": "操作手势/拖拽",
+    "Type": 5.0,
+    "FloatValue": 0.0,
+    "IntValue": 0.0,
+    "LongValue": 0.0,
+    "BoolValue": 0.0,
+    "StringValue": null
+  },
+  "3": {
+    "ID": 3.0,
+    "EnName": "IsDrop",
+    "CnName": "操作手势/拖拽放下",
+    "Type": 5.0,
+    "FloatValue": 0.0,
+    "IntValue": 0.0,
+    "LongValue": 0.0,
+    "BoolValue": 0.0,
+    "StringValue": null
+  },
+  "4": {
+    "ID": 4.0,
+    "EnName": "IsSurvial",
+    "CnName": "存活",
+    "Type": 5.0,
+    "FloatValue": 0.0,
+    "IntValue": 0.0,
+    "LongValue": 0.0,
+    "BoolValue": 0.0,
+    "StringValue": null
+  },
+  "5": {
+    "ID": 5.0,
+    "EnName": "IsRegisterDead",
+    "CnName": "标记注册死亡",
+    "Type": 5.0,
+    "FloatValue": 0.0,
+    "IntValue": 0.0,
+    "LongValue": 0.0,
+    "BoolValue": 0.0,
+    "StringValue": null
+  },
+  "6": {
+    "ID": 6.0,
+    "EnName": "IsRocker",
+    "CnName": "操作手势/摇杆",
+    "Type": 5.0,
+    "FloatValue": 0.0,
+    "IntValue": 0.0,
+    "LongValue": 0.0,
+    "BoolValue": 0.0,
+    "StringValue": null
+  },
+  "7": {
+    "ID": 7.0,
+    "EnName": "RockerX",
+    "CnName": "操作手势/摇杆X输入",
+    "Type": 0.0,
+    "FloatValue": 0.0,
+    "IntValue": 0.0,
+    "LongValue": 0.0,
+    "BoolValue": 0.0,
+    "StringValue": null
+  },
+  "8": {
+    "ID": 8.0,
+    "EnName": "RockerY",
+    "CnName": "操作手势/摇杆Y输入",
+    "Type": 0.0,
+    "FloatValue": 0.0,
+    "IntValue": 0.0,
+    "LongValue": 0.0,
+    "BoolValue": 0.0,
+    "StringValue": null
+  },
+  "9": {
+    "ID": 9.0,
+    "EnName": "RockerZ",
+    "CnName": "操作手势/摇杆Z输入",
+    "Type": 0.0,
+    "FloatValue": 0.0,
+    "IntValue": 0.0,
+    "LongValue": 0.0,
+    "BoolValue": 0.0,
+    "StringValue": null
+  },
+  "10": {
+    "ID": 10.0,
+    "EnName": "MoveFunction",
+    "CnName": "生物/移动-功能",
+    "Type": 3.0,
+    "FloatValue": 0.0,
+    "IntValue": 0.0,
+    "LongValue": 0.0,
+    "BoolValue": 0.0,
+    "StringValue": null
+  }
+}
