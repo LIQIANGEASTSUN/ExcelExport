@@ -1,4 +1,4 @@
-﻿public class map_config {
+﻿public class map_config : IJsonConfigBase {
 
     /// <summary>
     /// ID

@@ -1,4 +1,4 @@
-﻿public class addressable {
+﻿public class addressable : IJsonConfigBase {
 
     /// <summary>
     /// ID

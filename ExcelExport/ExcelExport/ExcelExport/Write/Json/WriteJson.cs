@@ -40,8 +40,6 @@ namespace ExcelExport
             _fileWriteWithLine.Close();
         }
 
-
-
         private void WriteRow(ReadExcel readExcel, CSType csType, List<object> list)
         {
             HashSet<int> exportColHash = WriteTools.ClientExportColHash(readExcel, csType);

@@ -1,4 +1,4 @@
-﻿public class skill {
+﻿public class skill : IJsonConfigBase {
 
     /// <summary>
     /// ID

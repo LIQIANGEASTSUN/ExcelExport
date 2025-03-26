@@ -1,4 +1,4 @@
-﻿public class table_text_localization {
+﻿public class table_text_localization : IJsonConfigBase {
 
     /// <summary>
     /// ID

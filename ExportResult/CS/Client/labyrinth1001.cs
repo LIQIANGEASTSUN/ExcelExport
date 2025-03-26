@@ -1,4 +1,4 @@
-﻿public class labyrinth1001 {
+﻿public class labyrinth1001 : IJsonConfigBase {
 
     /// <summary>
     /// ID

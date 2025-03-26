@@ -1,4 +1,4 @@
-﻿public class level {
+﻿public class level : IJsonConfigBase {
 
     /// <summary>
     /// ID

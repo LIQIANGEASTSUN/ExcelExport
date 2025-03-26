@@ -1,4 +1,4 @@
-﻿public class article {
+﻿public class article : IJsonConfigBase {
 
     /// <summary>
     /// ID

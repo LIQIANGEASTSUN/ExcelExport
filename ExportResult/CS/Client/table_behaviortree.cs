@@ -1,4 +1,4 @@
-﻿public class table_behaviortree {
+﻿public class table_behaviortree : IJsonConfigBase {
 
     /// <summary>
     /// ID

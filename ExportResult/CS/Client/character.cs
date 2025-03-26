@@ -1,4 +1,4 @@
-﻿public class character {
+﻿public class character : IJsonConfigBase {
 
     /// <summary>
     /// ID

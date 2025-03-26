@@ -39,6 +39,8 @@ namespace ExcelExport
 
             FileAttributes fileAttributes = File.GetAttributes(filePath);
 
+            new WriteJsonSuperCS();
+
             // 文件夹
             if ((fileAttributes & FileAttributes.Directory) == FileAttributes.Directory)
             {

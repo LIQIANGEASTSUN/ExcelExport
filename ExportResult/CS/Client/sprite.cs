@@ -1,4 +1,4 @@
-﻿public class sprite {
+﻿public class sprite : IJsonConfigBase {
 
     /// <summary>
     /// ID
