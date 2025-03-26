@@ -1,4 +1,6 @@
-﻿public class addressable : IJsonConfigBase {
+﻿using BettaSDK;
+
+public class addressable : IJsonConfigBase {
 
     /// <summary>
     /// ID

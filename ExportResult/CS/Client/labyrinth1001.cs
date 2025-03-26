@@ -1,4 +1,6 @@
-﻿public class labyrinth1001 : IJsonConfigBase {
+﻿using BettaSDK;
+
+public class labyrinth1001 : IJsonConfigBase {
 
     /// <summary>
     /// ID

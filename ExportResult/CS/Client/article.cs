@@ -1,4 +1,6 @@
-﻿public class article : IJsonConfigBase {
+﻿using BettaSDK;
+
+public class article : IJsonConfigBase {
 
     /// <summary>
     /// ID

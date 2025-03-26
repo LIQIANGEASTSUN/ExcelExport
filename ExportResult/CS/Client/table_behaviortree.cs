@@ -1,4 +1,6 @@
-﻿public class table_behaviortree : IJsonConfigBase {
+﻿using BettaSDK;
+
+public class table_behaviortree : IJsonConfigBase {
 
     /// <summary>
     /// ID

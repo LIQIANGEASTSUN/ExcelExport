@@ -1,4 +1,6 @@
-﻿public class character : IJsonConfigBase {
+﻿using BettaSDK;
+
+public class character : IJsonConfigBase {
 
     /// <summary>
     /// ID

@@ -1,4 +1,6 @@
-﻿public class table_text_localization : IJsonConfigBase {
+﻿using BettaSDK;
+
+public class table_text_localization : IJsonConfigBase {
 
     /// <summary>
     /// ID

@@ -50,7 +50,7 @@ namespace ExcelExport
             }
 
             Console.WriteLine("导表结束");
-
+            WriteJsonCsAnalysis.Write();
             OutPutErrorFile();
         }
         

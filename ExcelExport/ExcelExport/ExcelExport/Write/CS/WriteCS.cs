@@ -1,5 +1,4 @@
-﻿using Newtonsoft.Json;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System;
 using System.IO;
 using System.Text;
@@ -37,7 +36,9 @@ namespace ExcelExport
         private void WriteRow(ReadExcel readExcel, CSType csType)
         {
             HashSet<int> exportColHash = WriteTools.ClientExportColHash(readExcel, csType);
+
             string fileName = Path.GetFileNameWithoutExtension(readExcel.ExcelPath);
+            WriteJsonCsAnalysis.Add($"{fileName}.json", fileName);
 
             sb.Clear();
             sb.AppendLine("using BettaSDK;");

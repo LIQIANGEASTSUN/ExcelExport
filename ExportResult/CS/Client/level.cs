@@ -1,4 +1,6 @@
-﻿public class level : IJsonConfigBase {
+﻿using BettaSDK;
+
+public class level : IJsonConfigBase {
 
     /// <summary>
     /// ID

@@ -1,4 +1,6 @@
-﻿public class skill : IJsonConfigBase {
+﻿using BettaSDK;
+
+public class skill : IJsonConfigBase {
 
     /// <summary>
     /// ID

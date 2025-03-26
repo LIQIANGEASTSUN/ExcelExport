@@ -1,4 +1,6 @@
-﻿public class sprite : IJsonConfigBase {
+﻿using BettaSDK;
+
+public class sprite : IJsonConfigBase {
 
     /// <summary>
     /// ID

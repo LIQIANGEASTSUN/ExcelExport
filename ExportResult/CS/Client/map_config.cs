@@ -1,4 +1,6 @@
-﻿public class map_config : IJsonConfigBase {
+﻿using BettaSDK;
+
+public class map_config : IJsonConfigBase {
 
     /// <summary>
     /// ID
