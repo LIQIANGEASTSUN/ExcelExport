@@ -89,6 +89,8 @@ namespace ExcelExport
 
             new WriteJson(readExcel, CSType.C);
             new WriteJson(readExcel, CSType.S);
+
+            new WriteCS(readExcel, CSType.C);
             Console.WriteLine("导出完成:" + filePath);
             Console.WriteLine("");
         }

@@ -64,7 +64,9 @@
     <Compile Include="ExcelExport\Read\Convert\IConvert.cs" />
     <Compile Include="ExcelExport\Read\ExcelCheck.cs" />
     <Compile Include="ExcelExport\StartExport.cs" />
+    <Compile Include="ExcelExport\Write\CS\WriteCS.cs" />
     <Compile Include="ExcelExport\Write\Json\WriteJson.cs" />
+    <Compile Include="ExcelExport\Write\WriteTools.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ExcelExport\Read\ExcelConfig.cs" />

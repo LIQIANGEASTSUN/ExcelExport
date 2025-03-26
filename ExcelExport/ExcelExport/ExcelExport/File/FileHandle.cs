@@ -46,6 +46,10 @@ namespace ExcelExport
             {
                 return ".json";
             }
+            else if (fileType == FileType.CS)
+            {
+                return ".cs";
+            }
             return ".txt";
         }
 

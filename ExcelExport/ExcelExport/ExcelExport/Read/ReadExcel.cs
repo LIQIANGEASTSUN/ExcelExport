@@ -44,8 +44,15 @@ namespace ExcelExport
             get { return serverExportColHash; }
         }
 
-        // 属性名
+        // 注释
+        private List<object> noteList = new List<object>();
+        public List<object> NoteList
+        {
+            get { return noteList; }
+            private set { noteList = value; }
+        }
 
+        // 属性名
         private List<object> propertyNameList = new List<object>();
         public List<object> PropertyNameList
         {
@@ -190,6 +197,9 @@ namespace ExcelExport
         {
             int totalRow = dataTable.Rows.Count;
             int totalCol = dataTable.Columns.Count;
+
+            DataRow noteRow = dataTable.Rows[ExcelConfig.NoteRow];
+            NoteList = CollectRow(noteRow, totalCol);
 
             DataRow propertyNameRow = dataTable.Rows[ExcelConfig.PropertyNameRow];
             PropertyNameList = CollectRow(propertyNameRow, totalCol);

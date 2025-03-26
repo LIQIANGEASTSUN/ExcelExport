@@ -21,6 +21,7 @@ namespace ExcelExport
     {
         CSV,
         Json,
+        CS,
     }
 
     internal class ExcelConfig
@@ -29,6 +30,11 @@ namespace ExcelExport
         /// 配置表最少需要四行
         /// </summary>
         public const int RowMin = 4;
+
+        /// <summary>
+        /// 注释所在行
+        /// </summary>
+        public const int NoteRow = 0;
 
         /// <summary>
         /// 属性名行

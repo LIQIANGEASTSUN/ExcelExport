@@ -18,7 +18,7 @@ namespace ExcelExport
             {
                 return;
             }
-            string savePath = GetSavePath(readExcel, csType);
+            string savePath = WriteTools.GetSavePath(readExcel, csType, FileType.CSV);
             
             _fileWriteWithLine = new FileWriteWithLine(savePath);
             Console.WriteLine("savePath:" + savePath);
@@ -32,28 +32,10 @@ namespace ExcelExport
             _fileWriteWithLine.Close();
         }
 
-        private string GetSavePath(ReadExcel readExcel, CSType csType)
-        {
-            if (csType == CSType.C)
-            {
-                return FileHandle.GetClientPath(readExcel.ExcelPath, FileType.CSV);
-            }
-            return FileHandle.GetServerPath(readExcel.ExcelPath, FileType.CSV);
-        }
-
-        private HashSet<int> ClientExportColHash(ReadExcel readExcel, CSType csType)
-        {
-            if (csType == CSType.C)
-            {
-                return readExcel.ClientExportColHash;
-            }
-            return readExcel.ServerExportColHash;
-        }
-
         private void WriteRow(ReadExcel readExcel, CSType csType, List<object> list)
         {
             _sb.Clear();
-            HashSet<int> exportColHash = ClientExportColHash(readExcel, csType);
+            HashSet<int> exportColHash = WriteTools.ClientExportColHash(readExcel, csType);
             for (int i = 0; i < list.Count; i++)
             {
                 if (!exportColHash.Contains(i))

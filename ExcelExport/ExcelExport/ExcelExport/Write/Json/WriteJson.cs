@@ -19,7 +19,7 @@ namespace ExcelExport
             {
                 return;
             }
-            string savePath = GetSavePath(readExcel, csType);
+            string savePath = WriteTools.GetSavePath(readExcel, csType, FileType.Json);
             Console.WriteLine("savePath:" + savePath);
             _fileWriteWithLine = new FileWriteWithLine(savePath);
 
@@ -40,27 +40,11 @@ namespace ExcelExport
             _fileWriteWithLine.Close();
         }
 
-        private string GetSavePath(ReadExcel readExcel, CSType csType)
-        {
-            if (csType == CSType.C)
-            {
-                return FileHandle.GetClientPath(readExcel.ExcelPath, FileType.Json);
-            }
-            return FileHandle.GetServerPath(readExcel.ExcelPath, FileType.Json);
-        }
 
-        private HashSet<int> ClientExportColHash(ReadExcel readExcel, CSType csType)
-        {
-            if (csType == CSType.C)
-            {
-                return readExcel.ClientExportColHash;
-            }
-            return readExcel.ServerExportColHash;
-        }
 
         private void WriteRow(ReadExcel readExcel, CSType csType, List<object> list)
         {
-            HashSet<int> exportColHash = ClientExportColHash(readExcel, csType);
+            HashSet<int> exportColHash = WriteTools.ClientExportColHash(readExcel, csType);
 
             Dictionary<string, object> rowDic = new Dictionary<string, object>();
             string id = list[0].ToString();
