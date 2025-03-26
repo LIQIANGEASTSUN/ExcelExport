@@ -41,6 +41,7 @@ namespace ExcelExport
 
             sb.Clear();
             sb.AppendLine("using BettaSDK;");
+            sb.AppendLine();
             sb.AppendLine($"public class {fileName} : IJsonConfigBase {lb}");
             sb.AppendLine();
             for (int i = 0; i < readExcel.PropertyTypeList.Count; ++i)
