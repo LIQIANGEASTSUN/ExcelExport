@@ -34,7 +34,7 @@ namespace ExcelExport
             sb.AppendLine();
             sb.AppendLine($"public class JsonCsAnalysis {lb}");
             sb.AppendLine();
-            sb.AppendLine($"    public const int TotalCount = {_list.Count}");
+            sb.AppendLine($"    public const int TotalCount = {_list.Count};");
             sb.AppendLine($"    private Action OneLoadSuccess;");
             sb.AppendLine();
             sb.AppendLine($"    public void SetLoadCallBack(Action oneLoadSuccess)");
