@@ -65,7 +65,6 @@
     <Compile Include="ExcelExport\Read\ExcelCheck.cs" />
     <Compile Include="ExcelExport\StartExport.cs" />
     <Compile Include="ExcelExport\Write\CS\WriteCS.cs" />
-    <Compile Include="ExcelExport\Write\CS\WriteJsonSuperCS.cs" />
     <Compile Include="ExcelExport\Write\Json\WriteJson.cs" />
     <Compile Include="ExcelExport\Write\WriteTools.cs" />
     <Compile Include="Program.cs" />
