@@ -84,8 +84,8 @@ namespace ExcelExport
 
             Console.WriteLine("开始导出:" + filePath);
             ReadExcel readExcel = new ReadExcel(filePath);
-            new WriteCsv(readExcel, CSType.C);
-            new WriteCsv(readExcel, CSType.S);
+            //new WriteCsv(readExcel, CSType.C);
+            //new WriteCsv(readExcel, CSType.S);
 
             new WriteJson(readExcel, CSType.C);
             new WriteJson(readExcel, CSType.S);

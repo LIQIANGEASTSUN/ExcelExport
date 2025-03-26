@@ -38,10 +38,8 @@ namespace ExcelExport
         {
             HashSet<int> exportColHash = WriteTools.ClientExportColHash(readExcel, csType);
             string fileName = Path.GetFileNameWithoutExtension(readExcel.ExcelPath);
-            Console.WriteLine("CS: fileName:" + fileName);
 
             sb.Clear();
-
             sb.AppendLine($"public class {fileName} {lb}");
             sb.AppendLine();
             for (int i = 0; i < readExcel.PropertyTypeList.Count; ++i)
