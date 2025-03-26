@@ -17,21 +17,28 @@ namespace ExcelExport
             savePath = path;
         }
 
+        public static string GetSavePath(string fileName, CSType csType, FileType fileType)
+        {
+            if (csType == CSType.C)
+            {
+                return GetClientPath(fileName, fileType);
+            }
+            return GetServerPath(fileName, fileType);
+        }
+
         /// <summary>
         /// 获取 CSV 保存路径
         /// </summary>
         /// <param name="excelFilePath"></param>
         /// <returns></returns>
-        public static string GetClientPath(string excelFilePath, FileType fileType)
+        public static string GetClientPath(string fileName, FileType fileType)
         {
-            string fileName = Path.GetFileNameWithoutExtension(excelFilePath);
             string extension = GetExtension(fileType);
             return Path.Combine(savePath, fileType.ToString(), "Client", fileName + extension);
         }
 
-        public static string GetServerPath(string excelFilePath, FileType fileType)
+        public static string GetServerPath(string fileName, FileType fileType)
         {
-            string fileName = Path.GetFileNameWithoutExtension(excelFilePath);
             string extension = GetExtension(fileType);
             return Path.Combine(savePath, fileType.ToString(), "Server", fileName + extension);
         }

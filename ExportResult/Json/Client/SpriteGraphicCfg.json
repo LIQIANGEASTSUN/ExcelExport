@@ -1,0 +1,26 @@
+﻿{
+  "100001": {
+    "ID": 100001,
+    "ResType": 2,
+    "Direction": 4,
+    "ResPath": "Res/Spine/FrontRear/Hero/Hero2/Skin1/ch_hero2_skin1"
+  },
+  "100002": {
+    "ID": 100002,
+    "ResType": 2,
+    "Direction": 4,
+    "ResPath": "Res/Spine/FrontRear/Chocobo/Chocobo7/ch_chocobo7"
+  },
+  "100003": {
+    "ID": 100003,
+    "ResType": 2,
+    "Direction": 4,
+    "ResPath": "Res/Spine/FrontRear/Fox/Fox2/ch_fox2"
+  },
+  "200001": {
+    "ID": 200001,
+    "ResType": 3,
+    "Direction": 1,
+    "ResPath": "Res/Sprite/Article/sc_obj_burgeen_level03.png"
+  }
+}

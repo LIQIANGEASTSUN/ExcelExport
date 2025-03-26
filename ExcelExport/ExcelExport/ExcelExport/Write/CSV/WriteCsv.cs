@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Text;
 using System;
+using System.IO;
 
 namespace ExcelExport
 {
@@ -18,7 +19,9 @@ namespace ExcelExport
             {
                 return;
             }
-            string savePath = WriteTools.GetSavePath(readExcel, csType, FileType.CSV);
+
+            string fileName = Path.GetFileNameWithoutExtension(readExcel.ExcelPath);
+            string savePath = FileHandle.GetSavePath(fileName, csType, FileType.CSV);
             
             _fileWriteWithLine = new FileWriteWithLine(savePath);
             Console.WriteLine("savePath:" + savePath);

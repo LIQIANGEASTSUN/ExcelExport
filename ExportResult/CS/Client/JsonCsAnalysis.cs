@@ -4,7 +4,10 @@ using System.Threading.Tasks;
 using System;
 
 public class JsonCsAnalysis {
+
+    public const int TotalCount = 11;
     private Action OneLoadSuccess;
+
     public void SetLoadCallBack(Action oneLoadSuccess)
     {
         OneLoadSuccess = oneLoadSuccess;
@@ -17,16 +20,17 @@ public class JsonCsAnalysis {
 
     private async Task LoadAllJson()
     {
-        await LoadJson<addressable>("addressable.json");
-        await LoadJson<article>("article.json");
-        await LoadJson<character>("character.json");
-        await LoadJson<labyrinth1001>("labyrinth1001.json");
-        await LoadJson<level>("level.json");
-        await LoadJson<map_config>("map_config.json");
-        await LoadJson<skill>("skill.json");
-        await LoadJson<sprite>("sprite.json");
-        await LoadJson<table_behaviortree>("table_behaviortree.json");
-        await LoadJson<table_text_localization>("table_text_localization.json");
+        await LoadJson<ArticleCfg>("ArticleCfg.json");
+        await LoadJson<ArticleCfg>("ArticleCfg_1.json");
+        await LoadJson<ArticleCfg>("ArticleCfg_2.json");
+        await LoadJson<BehaviortreeCfg>("BehaviortreeCfg.json");
+        await LoadJson<CharacterCfg>("CharacterCfg.json");
+        await LoadJson<SpriteCfg>("SpriteCfg.json");
+        await LoadJson<SpriteGraphicCfg>("SpriteGraphicCfg.json");
+        await LoadJson<TextLocalizationCfg>("TextLocalizationCfg.json");
+        await LoadJson<UiBubbleCfg>("UiBubbleCfg.json");
+        await LoadJson<UiPanelCfg>("UiPanelCfg.json");
+        await LoadJson<XassetCfg>("XassetCfg.json");
     }
 
 	public async Task LoadJson<T>(string fileName) where T : class, IJsonConfigBase
@@ -35,7 +39,7 @@ public class JsonCsAnalysis {
         AssetHandle<TextAsset> assetHandle = await ResourcesManager.Instance.LoadAssetASync<TextAsset>(path);
         if (null != assetHandle.Asset)
         {
-            DebugLoger.Log("LoadJson Complete:JsonCsAnalysis");
+            DebugLoger.Log("LoadJson Complete:" + fileName);
             fileName = System.IO.Path.GetFileNameWithoutExtension(fileName);
             JsonConfigDatas.Instance.AddConfig<T>(fileName, assetHandle.Asset.text);
             OneLoadSuccess?.Invoke();

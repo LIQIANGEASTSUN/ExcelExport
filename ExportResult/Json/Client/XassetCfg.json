@@ -1,0 +1,202 @@
+﻿{
+  "1": {
+    "ID": 1,
+    "BuildName": "Custom_1",
+    "GroupId": 0,
+    "Enable": 1,
+    "DeliveryMode": 0,
+    "Directory": "SubAssets/JsonAssets",
+    "BundleMode": 0,
+    "AddressMode": 1
+  },
+  "2": {
+    "ID": 2,
+    "BuildName": "Custom_1",
+    "GroupId": 0,
+    "Enable": 1,
+    "DeliveryMode": 0,
+    "Directory": "SubAssets/HotUpdateDLL",
+    "BundleMode": 0,
+    "AddressMode": 1
+  },
+  "3": {
+    "ID": 3,
+    "BuildName": "Custom_1",
+    "GroupId": 0,
+    "Enable": 1,
+    "DeliveryMode": 0,
+    "Directory": "SubAssets/Res/Atlas",
+    "BundleMode": 4,
+    "AddressMode": 1
+  },
+  "4": {
+    "ID": 4,
+    "BuildName": "Custom_1",
+    "GroupId": 0,
+    "Enable": 1,
+    "DeliveryMode": 0,
+    "Directory": "SubAssets/Res/Fonts",
+    "BundleMode": 0,
+    "AddressMode": 1
+  },
+  "5": {
+    "ID": 5,
+    "BuildName": "Custom_1",
+    "GroupId": 0,
+    "Enable": 1,
+    "DeliveryMode": 0,
+    "Directory": "SubAssets/Res/Material",
+    "BundleMode": 0,
+    "AddressMode": 1
+  },
+  "6": {
+    "ID": 6,
+    "BuildName": "Custom_1",
+    "GroupId": 0,
+    "Enable": 1,
+    "DeliveryMode": 0,
+    "Directory": "SubAssets/Res/Prefab/Character",
+    "BundleMode": 0,
+    "AddressMode": 1
+  },
+  "7": {
+    "ID": 7,
+    "BuildName": "Custom_1",
+    "GroupId": 0,
+    "Enable": 1,
+    "DeliveryMode": 0,
+    "Directory": "SubAssets/Res/Prefab/Collider",
+    "BundleMode": 0,
+    "AddressMode": 1
+  },
+  "8": {
+    "ID": 8,
+    "BuildName": "Custom_1",
+    "GroupId": 0,
+    "Enable": 1,
+    "DeliveryMode": 0,
+    "Directory": "SubAssets/Res/Prefab/Labyrinth",
+    "BundleMode": 0,
+    "AddressMode": 1
+  },
+  "9": {
+    "ID": 9,
+    "BuildName": "Custom_1",
+    "GroupId": 0,
+    "Enable": 1,
+    "DeliveryMode": 0,
+    "Directory": "SubAssets/Res/Prefab/Palette",
+    "BundleMode": 0,
+    "AddressMode": 1
+  },
+  "10": {
+    "ID": 10,
+    "BuildName": "Custom_1",
+    "GroupId": 0,
+    "Enable": 1,
+    "DeliveryMode": 0,
+    "Directory": "SubAssets/Res/Prefab/Sound",
+    "BundleMode": 0,
+    "AddressMode": 1
+  },
+  "11": {
+    "ID": 11,
+    "BuildName": "Custom_2",
+    "GroupId": 0,
+    "Enable": 1,
+    "DeliveryMode": 0,
+    "Directory": "SubAssets/Res/Prefab/UI",
+    "BundleMode": 4,
+    "AddressMode": 1
+  },
+  "12": {
+    "ID": 12,
+    "BuildName": "Custom_2",
+    "GroupId": 0,
+    "Enable": 1,
+    "DeliveryMode": 0,
+    "Directory": "SubAssets/Res/Prefab/UIBubble",
+    "BundleMode": 4,
+    "AddressMode": 1
+  },
+  "13": {
+    "ID": 13,
+    "BuildName": "Custom_2",
+    "GroupId": 0,
+    "Enable": 1,
+    "DeliveryMode": 0,
+    "Directory": "SubAssets/Res/Prefab/UITips",
+    "BundleMode": 0,
+    "AddressMode": 1
+  },
+  "14": {
+    "ID": 14,
+    "BuildName": "Custom_2",
+    "GroupId": 0,
+    "Enable": 1,
+    "DeliveryMode": 0,
+    "Directory": "SubAssets/Res/Shaders",
+    "BundleMode": 4,
+    "AddressMode": 1
+  },
+  "15": {
+    "ID": 15,
+    "BuildName": "Custom_2",
+    "GroupId": 0,
+    "Enable": 1,
+    "DeliveryMode": 0,
+    "Directory": "SubAssets/Res/Sound",
+    "BundleMode": 4,
+    "AddressMode": 1
+  },
+  "16": {
+    "ID": 16,
+    "BuildName": "Custom_2",
+    "GroupId": 0,
+    "Enable": 1,
+    "DeliveryMode": 0,
+    "Directory": "SubAssets/Res/Spine/FrontRear",
+    "BundleMode": 4,
+    "AddressMode": 1
+  },
+  "17": {
+    "ID": 17,
+    "BuildName": "Custom_2",
+    "GroupId": 0,
+    "Enable": 1,
+    "DeliveryMode": 0,
+    "Directory": "SubAssets/Res/Spine/Single",
+    "BundleMode": 4,
+    "AddressMode": 1
+  },
+  "18": {
+    "ID": 18,
+    "BuildName": "Custom_2",
+    "GroupId": 0,
+    "Enable": 1,
+    "DeliveryMode": 0,
+    "Directory": "SubAssets/Res/Sprite/Article",
+    "BundleMode": 4,
+    "AddressMode": 1
+  },
+  "19": {
+    "ID": 19,
+    "BuildName": "Custom_2",
+    "GroupId": 0,
+    "Enable": 1,
+    "DeliveryMode": 0,
+    "Directory": "SubAssets/Res/Sprite/TileAsset",
+    "BundleMode": 4,
+    "AddressMode": 1
+  },
+  "20": {
+    "ID": 20,
+    "BuildName": "Custom_2",
+    "GroupId": 0,
+    "Enable": 1,
+    "DeliveryMode": 0,
+    "Directory": "SubAssets/Scenes",
+    "BundleMode": 1,
+    "AddressMode": 1
+  }
+}

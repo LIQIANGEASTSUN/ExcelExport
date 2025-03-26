@@ -1,0 +1,50 @@
+﻿{
+  "1002": {
+    "ID": 1002,
+    "Asset": "UIMainPanel/UIMainPanel.prefab",
+    "Layer": "MainLayer",
+    "ClassName": "UIMainPanel"
+  },
+  "1003": {
+    "ID": 1003,
+    "Asset": "UILevelSelectPanel/UILevelSelectPanel.prefab",
+    "Layer": "NormalLayer",
+    "ClassName": "UILevelSelectPanel"
+  },
+  "1004": {
+    "ID": 1004,
+    "Asset": "UILevelPanel/UILevelPanel.prefab",
+    "Layer": "NormalLayer",
+    "ClassName": "UILevelPanel"
+  },
+  "1005": {
+    "ID": 1005,
+    "Asset": "UIRoleOperationPanel/UIRoleOperationPanel.prefab",
+    "Layer": "NormalLayer",
+    "ClassName": "UIRoleOperationPanel"
+  },
+  "1006": {
+    "ID": 1006,
+    "Asset": "UILevelWinPanel/UILevelWinPanel.prefab",
+    "Layer": "NormalLayer",
+    "ClassName": "UILevelWinPanel"
+  },
+  "1007": {
+    "ID": 1007,
+    "Asset": "UISceneLoadingPanel/UISceneLoadingPanel.prefab",
+    "Layer": "LoadingLayer",
+    "ClassName": "UISceneLoadingPanel"
+  },
+  "1008": {
+    "ID": 1008,
+    "Asset": "UIShopPanel/UIShopPanel.prefab",
+    "Layer": "NormalLayer",
+    "ClassName": "UIShopPanel"
+  },
+  "1009": {
+    "ID": 1009,
+    "Asset": "UIGMPanel/UIGMPanel.prefab",
+    "Layer": "TipsLayer",
+    "ClassName": "UIGMPanel"
+  }
+}

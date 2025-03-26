@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System.Collections.Generic;
 using System;
+using System.IO;
 
 namespace ExcelExport
 {
@@ -19,10 +20,11 @@ namespace ExcelExport
             {
                 return;
             }
-            string savePath = WriteTools.GetSavePath(readExcel, csType, FileType.Json);
+
+            string fileName = Path.GetFileNameWithoutExtension(readExcel.ExcelPath);
+            string savePath = FileHandle.GetSavePath(fileName, csType, FileType.Json);
             Console.WriteLine("savePath:" + savePath);
             _fileWriteWithLine = new FileWriteWithLine(savePath);
-
             foreach(var property in readExcel.PropertyNameList)
             {
                 _propertyList.Add(property.ToString());

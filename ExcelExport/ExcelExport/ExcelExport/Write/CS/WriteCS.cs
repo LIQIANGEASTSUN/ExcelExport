@@ -11,6 +11,7 @@ namespace ExcelExport
     public class WriteCS
     {
         private FileWriteWithLine _fileWriteWithLine;
+        private string _className;
         private Dictionary<string, Dictionary<string, object>> _dic = new Dictionary<string, Dictionary<string, object>>();
         private StringBuilder sb = new StringBuilder();
 
@@ -20,14 +21,26 @@ namespace ExcelExport
             {
                 return;
             }
-            string savePath = WriteTools.GetSavePath(readExcel, csType, FileType.CS);
+
+            _className = readExcel.NoteList[0].ToString();
+
+            WriteToCsAnalysis(readExcel);
+            string savePath = FileHandle.GetSavePath(_className, csType, FileType.CS);
+            if (File.Exists(savePath))
+            {
+                return;
+            }
             Console.WriteLine("savePath:" + savePath);
             _fileWriteWithLine = new FileWriteWithLine(savePath);
-
             WriteRow(readExcel, csType);
-
             _fileWriteWithLine.AppendLine(sb.ToString());
             _fileWriteWithLine.Close();
+        }
+
+        private void WriteToCsAnalysis(ReadExcel readExcel)
+        {
+            string fileName = Path.GetFileNameWithoutExtension(readExcel.ExcelPath);
+            WriteJsonCsAnalysis.Add($"{fileName}.json", _className);
         }
 
         private const string lb = "{";
@@ -37,13 +50,10 @@ namespace ExcelExport
         {
             HashSet<int> exportColHash = WriteTools.ClientExportColHash(readExcel, csType);
 
-            string fileName = Path.GetFileNameWithoutExtension(readExcel.ExcelPath);
-            WriteJsonCsAnalysis.Add($"{fileName}.json", fileName);
-
             sb.Clear();
             sb.AppendLine("using BettaSDK;");
             sb.AppendLine();
-            sb.AppendLine($"public class {fileName} : IJsonConfigBase {lb}");
+            sb.AppendLine($"public class {_className} : IJsonConfigBase {lb}");
             sb.AppendLine();
             for (int i = 0; i < readExcel.PropertyTypeList.Count; ++i)
             {
@@ -73,7 +83,5 @@ namespace ExcelExport
             }
             sb.AppendLine($"{rb}");
         }
-
-
     }
 }

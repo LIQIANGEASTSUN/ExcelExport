@@ -1,0 +1,22 @@
+﻿{
+  "100001": {
+    "ID": 100001,
+    "ResType": 2,
+    "Direction": 4
+  },
+  "100002": {
+    "ID": 100002,
+    "ResType": 2,
+    "Direction": 4
+  },
+  "100003": {
+    "ID": 100003,
+    "ResType": 2,
+    "Direction": 4
+  },
+  "200001": {
+    "ID": 200001,
+    "ResType": 3,
+    "Direction": 1
+  }
+}

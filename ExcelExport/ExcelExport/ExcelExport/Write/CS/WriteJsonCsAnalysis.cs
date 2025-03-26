@@ -22,8 +22,8 @@ namespace ExcelExport
 
         public static void Write()
         {
-            string fileName = "JsonCsAnalysis";
-            string path = FileHandle.GetClientPath($"{fileName}.cs", FileType.CS);
+            string className = "JsonCsAnalysis";
+            string path = FileHandle.GetClientPath($"{className}", FileType.CS);
             Console.WriteLine("WriteJsonCsAnalysis path:" + path);
 
             StringBuilder sb = new StringBuilder();
@@ -62,7 +62,7 @@ namespace ExcelExport
 
             sb.AppendLine($"        if (null != assetHandle.Asset)");
             sb.AppendLine($"        {lb}");
-            sb.AppendLine($"            DebugLoger.Log(\"LoadJson Complete:{ fileName}\");");
+            sb.AppendLine($"            DebugLoger.Log(\"LoadJson Complete:\" + fileName);");
             sb.AppendLine($"            fileName = System.IO.Path.GetFileNameWithoutExtension(fileName);");
             sb.AppendLine($"            JsonConfigDatas.Instance.AddConfig<T>(fileName, assetHandle.Asset.text);");
             sb.AppendLine($"            OneLoadSuccess?.Invoke();");
