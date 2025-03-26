@@ -1,112 +1,112 @@
 ﻿{
   "1": {
-    "ID": 1.0,
+    "ID": 1,
     "EnName": "IsClick",
     "CnName": "操作手势/点击",
-    "Type": 5.0,
+    "Type": 5,
     "FloatValue": 0.0,
-    "IntValue": 0.0,
-    "LongValue": 0.0,
-    "BoolValue": 0.0,
-    "StringValue": null
+    "IntValue": 0,
+    "LongValue": "0",
+    "BoolValue": 0,
+    "StringValue": ""
   },
   "2": {
-    "ID": 2.0,
+    "ID": 2,
     "EnName": "IsDrag",
     "CnName": "操作手势/拖拽",
-    "Type": 5.0,
+    "Type": 5,
     "FloatValue": 0.0,
-    "IntValue": 0.0,
-    "LongValue": 0.0,
-    "BoolValue": 0.0,
-    "StringValue": null
+    "IntValue": 0,
+    "LongValue": "0",
+    "BoolValue": 0,
+    "StringValue": ""
   },
   "3": {
-    "ID": 3.0,
+    "ID": 3,
     "EnName": "IsDrop",
     "CnName": "操作手势/拖拽放下",
-    "Type": 5.0,
+    "Type": 5,
     "FloatValue": 0.0,
-    "IntValue": 0.0,
-    "LongValue": 0.0,
-    "BoolValue": 0.0,
-    "StringValue": null
+    "IntValue": 0,
+    "LongValue": "0",
+    "BoolValue": 0,
+    "StringValue": ""
   },
   "4": {
-    "ID": 4.0,
+    "ID": 4,
     "EnName": "IsSurvial",
     "CnName": "存活",
-    "Type": 5.0,
+    "Type": 5,
     "FloatValue": 0.0,
-    "IntValue": 0.0,
-    "LongValue": 0.0,
-    "BoolValue": 0.0,
-    "StringValue": null
+    "IntValue": 0,
+    "LongValue": "0",
+    "BoolValue": 0,
+    "StringValue": ""
   },
   "5": {
-    "ID": 5.0,
+    "ID": 5,
     "EnName": "IsRegisterDead",
     "CnName": "标记注册死亡",
-    "Type": 5.0,
+    "Type": 5,
     "FloatValue": 0.0,
-    "IntValue": 0.0,
-    "LongValue": 0.0,
-    "BoolValue": 0.0,
-    "StringValue": null
+    "IntValue": 0,
+    "LongValue": "0",
+    "BoolValue": 0,
+    "StringValue": ""
   },
   "6": {
-    "ID": 6.0,
+    "ID": 6,
     "EnName": "IsRocker",
     "CnName": "操作手势/摇杆",
-    "Type": 5.0,
+    "Type": 5,
     "FloatValue": 0.0,
-    "IntValue": 0.0,
-    "LongValue": 0.0,
-    "BoolValue": 0.0,
-    "StringValue": null
+    "IntValue": 0,
+    "LongValue": "0",
+    "BoolValue": 0,
+    "StringValue": ""
   },
   "7": {
-    "ID": 7.0,
+    "ID": 7,
     "EnName": "RockerX",
     "CnName": "操作手势/摇杆X输入",
-    "Type": 0.0,
+    "Type": 0,
     "FloatValue": 0.0,
-    "IntValue": 0.0,
-    "LongValue": 0.0,
-    "BoolValue": 0.0,
-    "StringValue": null
+    "IntValue": 0,
+    "LongValue": "0",
+    "BoolValue": 0,
+    "StringValue": ""
   },
   "8": {
-    "ID": 8.0,
+    "ID": 8,
     "EnName": "RockerY",
     "CnName": "操作手势/摇杆Y输入",
-    "Type": 0.0,
+    "Type": 0,
     "FloatValue": 0.0,
-    "IntValue": 0.0,
-    "LongValue": 0.0,
-    "BoolValue": 0.0,
-    "StringValue": null
+    "IntValue": 0,
+    "LongValue": "0",
+    "BoolValue": 0,
+    "StringValue": ""
   },
   "9": {
-    "ID": 9.0,
+    "ID": 9,
     "EnName": "RockerZ",
     "CnName": "操作手势/摇杆Z输入",
-    "Type": 0.0,
+    "Type": 0,
     "FloatValue": 0.0,
-    "IntValue": 0.0,
-    "LongValue": 0.0,
-    "BoolValue": 0.0,
-    "StringValue": null
+    "IntValue": 0,
+    "LongValue": "0",
+    "BoolValue": 0,
+    "StringValue": ""
   },
   "10": {
-    "ID": 10.0,
+    "ID": 10,
     "EnName": "MoveFunction",
     "CnName": "生物/移动-功能",
-    "Type": 3.0,
+    "Type": 3,
     "FloatValue": 0.0,
-    "IntValue": 0.0,
-    "LongValue": 0.0,
-    "BoolValue": 0.0,
-    "StringValue": null
+    "IntValue": 0,
+    "LongValue": "0",
+    "BoolValue": 0,
+    "StringValue": ""
   }
 }

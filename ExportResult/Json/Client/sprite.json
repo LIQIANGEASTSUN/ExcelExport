@@ -1,26 +1,26 @@
 ﻿{
   "100001": {
-    "ID": 100001.0,
-    "SpriteType": 1.0,
-    "ResType": 2.0,
-    "Direction": 4.0
+    "ID": 100001,
+    "SpriteType": 1,
+    "ResType": 2,
+    "Direction": 4
   },
   "100002": {
-    "ID": 100002.0,
-    "SpriteType": 1.0,
-    "ResType": 2.0,
-    "Direction": 4.0
+    "ID": 100002,
+    "SpriteType": 1,
+    "ResType": 2,
+    "Direction": 4
   },
   "100003": {
-    "ID": 100003.0,
-    "SpriteType": 1.0,
-    "ResType": 2.0,
-    "Direction": 4.0
+    "ID": 100003,
+    "SpriteType": 1,
+    "ResType": 2,
+    "Direction": 4
   },
   "200001": {
-    "ID": 200001.0,
-    "SpriteType": 2.0,
-    "ResType": 3.0,
-    "Direction": 1.0
+    "ID": 200001,
+    "SpriteType": 2,
+    "ResType": 3,
+    "Direction": 1
   }
 }

@@ -22,7 +22,9 @@ namespace ExcelExport
             
             _fileWriteWithLine = new FileWriteWithLine(savePath);
             Console.WriteLine("savePath:" + savePath);
-            foreach(List<object> list in readExcel.RowList)
+
+            WriteRow(readExcel, csType, readExcel.PropertyNameList);
+            foreach (List<object> list in readExcel.RowList)
             {
                 WriteRow(readExcel, csType, list);
             }

@@ -1,98 +1,26 @@
 ﻿{
   "1": {
-    "ID": 1.0,
+    "ID": 1,
     "Directory": "SubAssets/ConfigBin",
-    "Type": 1.0,
-    "Ignore": 0.0
+    "Type": 1,
+    "Ignore": 0,
+    "intArr": [1, 2, 3],
+    "towArr": [[100, 1001],[1002,1003]]
   },
   "2": {
-    "ID": 2.0,
+    "ID": 2,
     "Directory": "SubAssets/CSVAssets",
-    "Type": 1.0,
-    "Ignore": 0.0
+    "Type": 1,
+    "Ignore": 0,
+    "intArr": [4, 5, 6],
+    "towArr": [[1004, 1005],[1006,1007]]
   },
   "3": {
-    "ID": 3.0,
+    "ID": 3,
     "Directory": "SubAssets/Res/Fonts",
-    "Type": 1.0,
-    "Ignore": 0.0
-  },
-  "4": {
-    "ID": 4.0,
-    "Directory": "SubAssets/Res/Prefab/AddressableTest",
-    "Type": 1.0,
-    "Ignore": 0.0
-  },
-  "5": {
-    "ID": 5.0,
-    "Directory": "SubAssets/Res/Prefab/Character",
-    "Type": 1.0,
-    "Ignore": 0.0
-  },
-  "6": {
-    "ID": 6.0,
-    "Directory": "SubAssets/Res/Prefab/Collider",
-    "Type": 1.0,
-    "Ignore": 0.0
-  },
-  "7": {
-    "ID": 7.0,
-    "Directory": "SubAssets/Res/Prefab/Labyrinth",
-    "Type": 1.0,
-    "Ignore": 0.0
-  },
-  "8": {
-    "ID": 8.0,
-    "Directory": "SubAssets/Res/Prefab/Palette",
-    "Type": 1.0,
-    "Ignore": 0.0
-  },
-  "9": {
-    "ID": 9.0,
-    "Directory": "SubAssets/Res/Prefab/Sound",
-    "Type": 1.0,
-    "Ignore": 0.0
-  },
-  "10": {
-    "ID": 10.0,
-    "Directory": "SubAssets/Res/Prefab/UI",
-    "Type": 2.0,
-    "Ignore": 0.0
-  },
-  "11": {
-    "ID": 11.0,
-    "Directory": "SubAssets/Res/Sound",
-    "Type": 2.0,
-    "Ignore": 0.0
-  },
-  "12": {
-    "ID": 12.0,
-    "Directory": "SubAssets/Res/Spine/FrontRear",
-    "Type": 2.0,
-    "Ignore": 0.0
-  },
-  "13": {
-    "ID": 13.0,
-    "Directory": "SubAssets/Res/Spine/Single",
-    "Type": 2.0,
-    "Ignore": 0.0
-  },
-  "14": {
-    "ID": 14.0,
-    "Directory": "SubAssets/Res/Sprite",
-    "Type": 2.0,
-    "Ignore": 0.0
-  },
-  "15": {
-    "ID": 15.0,
-    "Directory": "SubAssets/Res/TileAsset",
-    "Type": 2.0,
-    "Ignore": 0.0
-  },
-  "16": {
-    "ID": 16.0,
-    "Directory": "SubAssets/Scenes",
-    "Type": 2.0,
-    "Ignore": 0.0
+    "Type": 1,
+    "Ignore": 0,
+    "intArr": [7, 8, 9],
+    "towArr": [[1008, 1009],[1010,1011]]
   }
 }

@@ -32,3 +32,14 @@ G:\Git\ExcelExport\ExcelExport\ExcelExport\bin\Debug\ExcelExport.pdb
 G:\Git\ExcelExport\ExcelExport\ExcelExport\obj\Debug\ExcelExport.exe
 G:\Git\ExcelExport\ExcelExport\ExcelExport\obj\Debug\ExcelExport.pdb
 G:\Git\ExcelExport\ExcelExport\ExcelExport\bin\Debug\Newtonsoft.Json.dll
+H:\PhantomFish\ExcelExport\ExcelExport\ExcelExport\bin\Debug\ExcelExport.exe.config
+H:\PhantomFish\ExcelExport\ExcelExport\ExcelExport\bin\Debug\ExcelExport.exe
+H:\PhantomFish\ExcelExport\ExcelExport\ExcelExport\bin\Debug\ExcelExport.pdb
+H:\PhantomFish\ExcelExport\ExcelExport\ExcelExport\bin\Debug\Excel.dll
+H:\PhantomFish\ExcelExport\ExcelExport\ExcelExport\bin\Debug\ICSharpCode.SharpZipLib.dll
+H:\PhantomFish\ExcelExport\ExcelExport\ExcelExport\bin\Debug\Newtonsoft.Json.dll
+H:\PhantomFish\ExcelExport\ExcelExport\ExcelExport\obj\Debug\ExcelExport.csproj.AssemblyReference.cache
+H:\PhantomFish\ExcelExport\ExcelExport\ExcelExport\obj\Debug\ExcelExport.csproj.CoreCompileInputs.cache
+H:\PhantomFish\ExcelExport\ExcelExport\ExcelExport\obj\Debug\ExcelExport.csproj.CopyComplete
+H:\PhantomFish\ExcelExport\ExcelExport\ExcelExport\obj\Debug\ExcelExport.exe
+H:\PhantomFish\ExcelExport\ExcelExport\ExcelExport\obj\Debug\ExcelExport.pdb

@@ -1,6 +1,6 @@
 ﻿{
   "1": {
-    "ID": 1.0,
+    "ID": 1,
     "Type": "矩形",
     "CameraX": 6.0,
     "CameraY": -4.0,
@@ -16,7 +16,7 @@
     "AxisColZ": 0.0
   },
   "2": {
-    "ID": 2.0,
+    "ID": 2,
     "Type": "菱形",
     "CameraX": 7.5,
     "CameraY": 0.5,

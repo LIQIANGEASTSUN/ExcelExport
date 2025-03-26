@@ -56,6 +56,12 @@
   <ItemGroup>
     <Compile Include="ExcelExport\File\FileHandle.cs" />
     <Compile Include="ExcelExport\File\FileWriteWithLine.cs" />
+    <Compile Include="ExcelExport\Read\Convert\ConvertDouble.cs" />
+    <Compile Include="ExcelExport\Read\Convert\ConvertLong.cs" />
+    <Compile Include="ExcelExport\Read\Convert\ConvertFloat.cs" />
+    <Compile Include="ExcelExport\Read\Convert\ConvertInt.cs" />
+    <Compile Include="ExcelExport\Read\Convert\ConvertString.cs" />
+    <Compile Include="ExcelExport\Read\Convert\IConvert.cs" />
     <Compile Include="ExcelExport\Read\ExcelCheck.cs" />
     <Compile Include="ExcelExport\StartExport.cs" />
     <Compile Include="ExcelExport\Write\Json\WriteJson.cs" />

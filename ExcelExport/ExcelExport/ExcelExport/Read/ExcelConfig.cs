@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System;
 
 namespace ExcelExport
 {
@@ -74,5 +75,18 @@ namespace ExcelExport
             "Json",
         };
 
+        private static Dictionary<string, IConvert> _propertyConvertDic = new Dictionary<string, IConvert>() {
+            { "int", new ConvertInt() },
+            { "long", new ConvertLong()  },
+            { "float", new ConvertFloat() },
+            { "double", new ConvertDouble()  },
+            { "string", new ConvertString() },
+            { "Json", new ConvertString()},
+        };
+        public static IConvert CanConvert(string propertyType)
+        {
+            _propertyConvertDic.TryGetValue(propertyType, out IConvert convert);
+            return convert;
+        }
     }
 }

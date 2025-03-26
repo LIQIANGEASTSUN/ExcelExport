@@ -23,18 +23,19 @@ namespace ExcelExport
             Console.WriteLine("savePath:" + savePath);
             _fileWriteWithLine = new FileWriteWithLine(savePath);
 
-            foreach(var property in readExcel.RowList[0])
+            foreach(var property in readExcel.PropertyNameList)
             {
                 _propertyList.Add(property.ToString());
             }
 
-            for (int i = 1; i < readExcel.RowList.Count; i++)
+            foreach (List<object> list in readExcel.RowList)
             {
-                List<object> list = readExcel.RowList[i];
                 WriteRow(readExcel, csType, list);
             }
 
             string json = JsonConvert.SerializeObject(_dic, Formatting.Indented);
+            json = json.Replace("\"[", "[");
+            json = json.Replace("]\"", "]");
             _fileWriteWithLine.AppendLine(json);
             _fileWriteWithLine.Close();
         }
@@ -75,5 +76,6 @@ namespace ExcelExport
             }
             _dic[id] = rowDic;
         }
+
     }
 }

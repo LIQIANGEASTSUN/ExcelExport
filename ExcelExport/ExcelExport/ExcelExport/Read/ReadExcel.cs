@@ -17,37 +17,52 @@ namespace ExcelExport
     public class ReadExcel
     {
         private string excelPath = string.Empty;
-        private bool isValid = false;
-
-        /// 客户端需要导出的列
-        private HashSet<int> clientExportColHash = new HashSet<int>();
-        /// 服务器需要导出的列
-        private HashSet<int> serverExportColHash = new HashSet<int>();
-        /// 配置表数据
-        private List<List<object>> rowList = new List<List<object>>();
-
         public string ExcelPath
         {
             get { return excelPath; }
             private set { excelPath = value; }
         }
 
+        private bool isValid = false;
         public bool IsValid
         {
             get { return isValid; }
             private set { isValid = value; }
         }
 
+        /// 客户端需要导出的列
+        private HashSet<int> clientExportColHash = new HashSet<int>();
         public HashSet<int> ClientExportColHash
         {
             get { return clientExportColHash; }
         }
 
+        /// 服务器需要导出的列
+        private HashSet<int> serverExportColHash = new HashSet<int>();
         public HashSet<int> ServerExportColHash
         {
             get { return serverExportColHash; }
         }
 
+        // 属性名
+
+        private List<object> propertyNameList = new List<object>();
+        public List<object> PropertyNameList
+        {
+            get { return propertyNameList; }
+            private set { propertyNameList = value; }
+        }
+
+        // 属性类型
+        private List<object> propertyTypeList = new List<object>();
+        public List<object> PropertyTypeList
+        {
+            get { return propertyTypeList; }
+            private set { propertyTypeList = value; }
+        }
+
+        /// 配置表数据
+        private List<List<object>> rowList = new List<List<object>>();
         public List<List<object>> RowList
         {
             get { return rowList; }
@@ -177,56 +192,54 @@ namespace ExcelExport
             int totalCol = dataTable.Columns.Count;
 
             DataRow propertyNameRow = dataTable.Rows[ExcelConfig.PropertyNameRow];
-            CollectRow(propertyNameRow, totalCol);
+            PropertyNameList = CollectRow(propertyNameRow, totalCol);
+
+            DataRow propertyTypeRow = dataTable.Rows[ExcelConfig.PropertyTypeRow];
+            PropertyTypeList = CollectRow(propertyTypeRow, totalCol);
 
             for (int row = ExcelConfig.DataStartRow; row < totalRow; ++row)
             {
                 DataRow dataRow = dataTable.Rows[row];
-                CollectRow(dataRow, totalCol);
+                List<object> list = CollectRow(dataRow, totalCol);
+                if (null != list)
+                {
+                    RowList.Add(list);
+                }
             }
         }
 
-        private void CollectRow(DataRow dataRow, int totalCol)
+        private List<object> CollectRow(DataRow dataRow, int totalCol)
         {
             List<object> list = new List<object>();
 
             string key = dataRow[0].ToString();
             if (string.IsNullOrEmpty(key))
             {
-                return;
+                return null;
             }
 
             for (int col = 0; col < totalCol; col++)
             {
                 object cellObject = dataRow[col];
-                cellObject = ProcessCellValue(cellObject);
+                cellObject = ProcessCellValue(col, cellObject);
                 list.Add(cellObject);
             }
-            RowList.Add(list);
+            return list;
         }
 
-        private object ProcessCellValue(object cellObject)
+        private object ProcessCellValue(int col, object cellObject)
         {
-            bool isProcess = false;
-            string cellValue = cellObject.ToString();
-            // 处理包含逗号或双引号的字段
-            if (cellValue.Contains(",") || cellValue.Contains("\""))
+            if (PropertyTypeList.Count <= 0)
             {
-                // 如果包含双引号，替换为两个双引号
-                cellValue = cellValue.Replace("\"", "\"\"");
-
-                // 用双引号包裹整个字段
-                cellValue = $"\"{cellValue}\"";
-                isProcess = true;
+                return cellObject;
             }
-
-            if (cellValue.Contains("\n"))
+            string propertyType = PropertyTypeList[col].ToString();
+            IConvert convert = ExcelConfig.CanConvert(propertyType);
+            if (null == convert)
             {
-                cellValue = cellValue.Replace("\n", "\\n");
-                isProcess = true;
+                return cellObject;
             }
-
-            return isProcess ? cellValue : cellObject;
+            return convert.Convert(cellObject);
         }
 
         private void Debug(string msg)
