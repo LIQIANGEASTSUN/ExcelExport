@@ -64,7 +64,7 @@ namespace ExcelExport
             sb.AppendLine($"        {lb}");
             sb.AppendLine($"            DebugLoger.Log(\"LoadJson Complete:\" + fileName);");
             sb.AppendLine($"            fileName = System.IO.Path.GetFileNameWithoutExtension(fileName);");
-            sb.AppendLine($"            JsonConfigDatas.Instance.AddConfig<T>(fileName, assetHandle.Asset.text);");
+            sb.AppendLine($"            JsonConfigCenter.Instance.AddConfig<T>(fileName, assetHandle.Asset.text);");
             sb.AppendLine($"            OneLoadSuccess?.Invoke();");
             sb.AppendLine($"        {rb}");
             sb.AppendLine($"        else");
